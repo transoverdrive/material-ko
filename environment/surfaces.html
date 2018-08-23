@@ -1,0 +1,2753 @@
+
+<!DOCTYPE html>
+<html lang="en" class="preload">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Surfaces - 머티리얼 디자인</title>
+
+<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Surfaces" />
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Material Design has three-dimensional qualities that are reflected in its use of surfaces, depth, and shadows." />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1erPQ5sZ1808zS1WqSPdOXzlZ5aR4QN6a%2Fenvironment-thumbnail-2x1.png" />
+    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/environment/surfaces.html" />
+    <meta property="og:site_name" content="Material Design" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">    <link rel="shortcut icon" href="../favicon.ico">
+    <link href="../static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+    <link rel="preload" href="../static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+  </head>
+
+  <body class="header-show page--article left-rail"
+        data-comp="Global "
+        data-slug-id="surfaces"
+        data-spec-alias="mio-design"
+ >
+
+
+
+<!-- 상단 플로팅 영역 헤더 시작 -->
+    <header class="header js-header" data-comp="Header">
+        <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+            <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+        </button>
+        <a href="/introduction/index.html" class="brand-lockup js-analytics-click">
+            <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+            <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+        </a>
+        <nav class="header__nav" role="navigation">
+        </nav>
+    </header>
+    <!-- 상단 플로팅 영역 헤더 끝 -->
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs">
+    <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons" title="Toggle Navigation">menu</i>
+    </button>
+
+
+<a href="/" class="brand-lockup js-analytics-click"
+   data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "global click",
+    "label": "logo"}
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  <ol class="container container--large breadcrumbs__list">
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click "
+           href="../environment"
+           data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../environment"}
+'>Environment</a>
+      </li>
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
+           href="../environment/surfaces.html"
+           data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../environment/surfaces.html"}
+'>Surfaces</a>
+      </li>
+      <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
+           href="#material environment"
+           data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "#material environment"}
+'>Material environment</a>
+      </li>
+  </ol>
+</nav>
+
+<nav class="side-nav" data-comp="SideNav" role="navigation">
+
+<a href="/" class="brand-lockup js-analytics-click"
+   data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "global click",
+    "label": "logo"}
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+
+
+            <span class="side-nav__section-title">Material System</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../introduction"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../introduction"}
+'>
+            Introduction
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav1"
+                  aria-expanded="false">
+            Material studies
+          </button>
+            <div class="side-nav__wrapper" id="_nav1">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/about-our-material-studies.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/about-our-material-studies.html"}
+'>
+            About our Material studies
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/basil.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"}
+'>
+            Basil
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/crane.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/crane.html"}
+'>
+            Crane
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/fortnightly.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/fortnightly.html"}
+'>
+            Fortnightly
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/owl.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/owl.html"}
+'>
+            Owl
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/rally.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/rally.html"}
+'>
+            Rally
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/reply.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/reply.html"}
+'>
+            Reply
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/shrine.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/shrine.html"}
+'>
+            Shrine
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Foundation</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../foundation-overview"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../foundation-overview"}
+'>
+            Foundation overview
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
+                  aria-controls="_nav3"
+                  aria-expanded="true">
+            Environment
+          </button>
+            <div class="side-nav__wrapper" id="_nav3">
+    <ul class="side-nav__submenu" data-menu-state="open">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+side-nav__link--active js-header-show"
+              href="../environment/surfaces.html" aria-current="page" data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/surfaces.html"}
+'>
+            Surfaces
+          </a>
+
+            <div class="side-nav__articles">
+              <i class="side-nav__progress-bar">
+                <i class="side-nav__scrub js-submenu-scrub"></i>
+              </i>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-material-environment js-analytics-click" href="#material-environment" data-section-id="material-environment"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#material-environment"}
+'>
+                    <span class="js-anchor-text">Material environment</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-properties js-analytics-click" href="#properties" data-section-id="properties"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#properties"}
+'>
+                    <span class="js-anchor-text">Properties</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-attributes js-analytics-click" href="#attributes" data-section-id="attributes"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#attributes"}
+'>
+                    <span class="js-anchor-text">Attributes</span>
+                  </a>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../environment/elevation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/elevation.html"}
+'>
+            Elevation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../environment/light-shadows.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/light-shadows.html"}
+'>
+            Light and shadows
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav4"
+                  aria-expanded="false">
+            Layout
+          </button>
+            <div class="side-nav__wrapper" id="_nav4">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/understanding-layout.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/understanding-layout.html"}
+'>
+            Understanding layout
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/responsive-layout-grid.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/responsive-layout-grid.html"}
+'>
+            Responsive layout grid
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/spacing-methods.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/spacing-methods.html"}
+'>
+            Spacing methods
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/component-behavior.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/component-behavior.html"}
+'>
+            Component behavior
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/density.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/density.html"}
+'>
+            Density
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav5"
+                  aria-expanded="false">
+            Navigation
+          </button>
+            <div class="side-nav__wrapper" id="_nav5">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../navigation/understanding-navigation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/understanding-navigation.html"}
+'>
+            Understanding navigation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../navigation/navigation-transitions.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/navigation-transitions.html"}
+'>
+            Navigation transitions
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../navigation/search.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/search.html"}
+'>
+            Search
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav6"
+                  aria-expanded="false">
+            Color
+          </button>
+            <div class="side-nav__wrapper" id="_nav6">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/the-color-system.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/the-color-system.html"}
+'>
+            The color system
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/applying-color-to-ui.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/applying-color-to-ui.html"}
+'>
+            Applying color to UI
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/color-usage.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/color-usage.html"}
+'>
+            Color usage
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/text-legibility.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/text-legibility.html"}
+'>
+            Text legibility
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav7"
+                  aria-expanded="false">
+            Typography
+          </button>
+            <div class="side-nav__wrapper" id="_nav7">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../typography/the-type-system.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/the-type-system.html"}
+'>
+            The type system
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../typography/understanding-typography.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/understanding-typography.html"}
+'>
+            Understanding typography
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../typography/language-support.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/language-support.html"}
+'>
+            Language support
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav8"
+                  aria-expanded="false">
+            Iconography
+          </button>
+            <div class="side-nav__wrapper" id="_nav8">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../iconography/product-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/product-icons.html"}
+'>
+            Product icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../iconography/system-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/system-icons.html"}
+'>
+            System icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../iconography/animated-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/animated-icons.html"}
+'>
+            Animated icons
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav9"
+                  aria-expanded="false">
+            Shape
+          </button>
+            <div class="side-nav__wrapper" id="_nav9">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/about-shape.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/about-shape.html"}
+'>
+            About shape
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/shape-hierarchy.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-hierarchy.html"}
+'>
+            Shape and hierarchy
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/shape-as-expression.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-as-expression.html"}
+'>
+            Shape as expression
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/shape-motion.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-motion.html"}
+'>
+            Shape and motion
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav10"
+                  aria-expanded="false">
+            Motion
+          </button>
+            <div class="side-nav__wrapper" id="_nav10">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/understanding-motion.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/understanding-motion.html"}
+'>
+            Understanding motion
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/speed.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/speed.html"}
+'>
+            Speed
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/choreography.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/choreography.html"}
+'>
+            Choreography
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/customization.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/customization.html"}
+'>
+            Customization
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav11"
+                  aria-expanded="false">
+            Interaction
+          </button>
+            <div class="side-nav__wrapper" id="_nav11">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../interaction/gestures.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/gestures.html"}
+'>
+            Gestures
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../interaction/selection.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/selection.html"}
+'>
+            Selection
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../interaction/states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/states.html"}
+'>
+            States
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav12"
+                  aria-expanded="false">
+            Communication
+          </button>
+            <div class="side-nav__wrapper" id="_nav12">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/confirmation-acknowledgement.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/confirmation-acknowledgement.html"}
+'>
+            Confirmation &amp; acknowledgement
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/data-formats.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/data-formats.html"}
+'>
+            Data formats
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/empty-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/empty-states.html"}
+'>
+            Empty states
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/help-feedback.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/help-feedback.html"}
+'>
+            Help &amp; feedback
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/imagery.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/imagery.html"}
+'>
+            Imagery
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/launch-screen.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/launch-screen.html"}
+'>
+            Launch screen
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/onboarding.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/onboarding.html"}
+'>
+            Onboarding
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/writing.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/writing.html"}
+'>
+            Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"}
+'>
+            Guidelines overview
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav14"
+                  aria-expanded="false">
+            Material Theming
+          </button>
+            <div class="side-nav__wrapper" id="_nav14">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-theming/overview.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/overview.html"}
+'>
+            Overview
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-theming/implementing-your-theme.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/implementing-your-theme.html"}
+'>
+            Implementing your theme
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav15"
+                  aria-expanded="false">
+            Components
+          </button>
+            <div class="side-nav__wrapper" id="_nav15">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/app-bars-bottom.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-bottom.html"}
+'>
+            App bars: bottom
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/app-bars-top.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-top.html"}
+'>
+            App bars: top
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/backdrop.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/backdrop.html"}
+'>
+            Backdrop
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/banners.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/banners.html"}
+'>
+            Banners
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/bottom-navigation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/bottom-navigation.html"}
+'>
+            Bottom navigation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/buttons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons.html"}
+'>
+            Buttons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/buttons-floating-action-button.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons-floating-action-button.html"}
+'>
+            Buttons: floating action button
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/cards.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/cards.html"}
+'>
+            Cards
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/chips.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/chips.html"}
+'>
+            Chips
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/data-tables.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/data-tables.html"}
+'>
+            Data tables
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/dialogs.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dialogs.html"}
+'>
+            Dialogs
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/dividers.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dividers.html"}
+'>
+            Dividers
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/image-lists.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/image-lists.html"}
+'>
+            Image lists
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/lists.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/lists.html"}
+'>
+            Lists
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/menus.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/menus.html"}
+'>
+            Menus
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/navigation-drawer.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/navigation-drawer.html"}
+'>
+            Navigation drawer
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/progress-indicators.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/progress-indicators.html"}
+'>
+            Progress indicators
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/selection-controls.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/selection-controls.html"}
+'>
+            Selection controls
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/sheets-bottom.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-bottom.html"}
+'>
+            Sheets: bottom
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/sheets-side.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-side.html"}
+'>
+            Sheets: side
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/sliders.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sliders.html"}
+'>
+            Sliders
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/snackbars.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/snackbars.html"}
+'>
+            Snackbars
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/tabs.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tabs.html"}
+'>
+            Tabs
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/text-fields.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/text-fields.html"}
+'>
+            Text fields
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/tooltips.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tooltips.html"}
+'>
+            Tooltips
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/accessibility.html"}
+'>
+            Accessibility
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav17"
+                  aria-expanded="false">
+            Platform guidance
+          </button>
+            <div class="side-nav__wrapper" id="_nav17">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-bars.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-bars.html"}
+'>
+            Android bars
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-fingerprint.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-fingerprint.html"}
+'>
+            Android fingerprint
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-haptics.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-haptics.html"}
+'>
+            Android haptics
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-icons.html"}
+'>
+            Android icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-navigating-between-apps.html"}
+'>
+            Android navigating between apps
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-notifications.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-notifications.html"}
+'>
+            Android notifications
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-permissions.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-permissions.html"}
+'>
+            Android permissions
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-settings.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-settings.html"}
+'>
+            Android settings
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-split-screen.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-split-screen.html"}
+'>
+            Android split-screen
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-swipe-to-refresh.html"}
+'>
+            Android swipe to refresh
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-text-selection-toolbar.html"}
+'>
+            Android text selection toolbar
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-widget.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-widget.html"}
+'>
+            Android widget
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/cross-platform-adaptation.html"}
+'>
+            Cross-platform adaptation
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+  </ul>
+</nav>
+    <main class="main" role="main">
+
+<article class="article" data-comp="Waypoints">
+  <div class="article__intro container container--large js-waypoints-trigger-initial">
+    <div class="article__intro-text">
+      <h1 class="article__title animatable js-anim-trigger">
+
+        Surfaces
+
+            <div class="article-controls">
+              
+            </div>
+      </h1>
+
+
+        <div class="article__intro-text animatable js-anim-trigger">
+        <div>
+<div aria-hidden="true" class="keywords hidden">environment, surfaces</div>
+<h2 title="Material Design has three-dimensional qualities that are reflected in its use of surfaces, depth, and shadows.">
+	머티리얼 디자인은 표면, 깊이, 그리고 그림자를 통해 나타나는 3차원적인 속성들을 갖고 있습니다.
+</h2></div>
+        </div>
+    </div>
+
+      <nav class="article__nav animatable js-anim-trigger">
+        <span class="eyebrow">목차</span>
+        <ul>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#material-environment" data-section-id="material-environment"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#material-environment"}
+'>머티리얼 환경 (Material Environment)</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#properties" data-section-id="properties"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#properties"}
+'>속성 (Properties)</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#attributes" data-section-id="attributes"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#attributes"}
+'>특징 (Attributes)</a>
+            </li>
+        </ul>
+      </nav>
+  </div>
+  <hr />
+
+  <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger">
+      <section id="material-environment" class="container container--large js-waypoints-trigger article__section" data-section-title="Material environment" aria-label="Material environment">
+          <h2 class="article__chapter-title">
+            머티리얼 환경
+            <span class="article-controls">
+              </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">depth, thickness, material, world, 3d</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading" title="The physical world">물리적 세계</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module">
+	<p title="In the physical world, objects can be stacked or attached to one another, but cannot pass through each other. They cast shadows and reflect light.">물리적 세계에서 사물들(objects)은 쌓이거나 서로 붙을 수는 있으나, 서로 통과하지는 못합니다. 사물들은 그림자를 만들고, 빛을 반사합니다.</p>
+	<p title="Material Design reflects these qualities in how surfaces are displayed and move across the Material UI. Surfaces, and how they move in three dimensions, are communicated in ways that resemble how they move in the physical world. This spatial model can also be applied consistently across apps.">머티리얼 디자인은 이러한 사물들이 갖고 있는 성질들을 표면(Surfaces)들이 화면에 표시되는 방식, 머티리얼 UI를 가로질러 이동하는 방식을 통해 나타납니다. 표면들은 물리적 세계를 닮은 방식으로 소통하며 3차원적으로 움직입니다. 이러한 공간적인 모델은 앱들 전반에 일관적으로 적용될 수 있습니다.</p>
+</div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../environment/light-shadows.html#light-shadows"}
+' href="../environment/light-shadows.html#light-shadows" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1EwT7jAiJ4QT_iKX2IiuwSvFKZLXBQzUz%2Fenvironment-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1EwT7jAiJ4QT_iKX2IiuwSvFKZLXBQzUz%2Fenvironment-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Light and Shadows</h2>
+<p class="object-card__body">Material surfaces cast shadows when they obstruct light sources.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading" title="Depth">깊이 </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p title="Material Design UIs are displayed in an environment that expresses three-dimensional (3D) space using light, surfaces, and cast shadows. All elements in the Material environment move horizontally, vertically, and at varying depths along the z-axis. Depth is depicted by placing elements at various points along the positive z-axis extending towards the viewer.">머티리얼 디자인 UI들은 빛, 표면들, 그림자 드리우기를 3차원 공간(3D)을 표현하는 환경에서 표시됩니다. 머티리얼 환경의 모든 요소들은 수평으로, 수직으로, 그리고 Z축의 다양한 깊이로 움직입니다. 깊이는 사용자를 향해 연장되는 양의 Z축을 따라 여러 깊이에 다층적으로 요소를 배치함으로써 묘사됩니다.</p><p title="On the web, the UI expresses 3D space by manipulating the y-axis.">웹에서는 UI는 Y축을 조종하여 3차원 공간을 표현합니다. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 63.1578947368%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="material-environment-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="63.1578947368%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B8v7jImPsDi-ZUJfcjFIdEVNN28%2Fwhatismaterial-environment-3d.png" src="">
+</img></div>
+</div>
+<figcaption id="material-environment-figure-caption-0">
+<p>X, Y, Z축이 존재하는 3차원 공간</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="properties" class="container container--large js-waypoints-trigger article__section" data-section-title="Properties" aria-label="Properties">
+          <h2 class="article__chapter-title">
+            Properties (속성)
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">depth, thickness, material, world, 3d</div>
+<p title="Material surfaces have consistent, unchangeable characteristics and behaviors across Material Design.">
+	머티리얼 표면은 일관적이고, 변할 수 없는 특징들을 갖고 있으며, 머티리얼 디자인 전반을 걸쳐 행동합니다.
+</p><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">Dimensions (차원들)</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>머티리얼은 다양한 X축 위치, Y축 위치(dp로 측정됨)를 가지며, 1dp라는 동일한 두께를 가집니다.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B8v7jImPsDi-eEJlcFFMUzJXSlE%2Fwhatismaterial-materialproperties-physicalproperties-thickness-01-yes.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-0">
+<p class="s-tag-caption do">Do.</p><p>머티리얼의 높이와 너비는 다양할 수 있습니다.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B8v7jImPsDi-UXUtRnFHcEVKeVU%2Fwhatismaterial-materialproperties-physicalproperties-thickness-02-no.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-1">
+<p class="s-tag-caption dont">Don’t.</p><p>머티리얼의 두께는 항상 1dp이어야만 합니다.</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../layout/understanding-layout.html#pixel-density"}
+' href="../layout/understanding-layout.html#pixel-density" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1dSJDmw8IEs5QI4zc4Q5rQMUA6djtPskd%2Flayout-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1dSJDmw8IEs5QI4zc4Q5rQMUA6djtPskd%2Flayout-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">픽셀 밀도</h2>
+<p class="object-card__body" title="Material Design layout encourages consistency across platforms, environments, and screen sizes by repeating visual elements and using consistent spacing.">머티리얼 디자인 레이아웃은 시각적 요소들을 반복하고, 동일한 간격 활용을 통해 다양한 플랫폼, 환경, 그리고 해상도에서 일관된 레이아웃을 적용하도록 합니다. </p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">그림자</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p title="Material surfaces at different elevations cast shadows.">서로 다른 높이에 있는 머티리얼 표면들은 그림자를 드리웁니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-2" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1NulZoBoZiguk5YAo74aNIR-mRGPmxjSV%2Fmaterialshadow-do.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-2">
+<p class="s-tag-caption do">Do.</p><p title="Shadows show the elevation of different Material surfaces.">그림자들은 서로 다른 머티리얼 표면들의 높이를 보여줍니다.</p><ol class="lst-kix_lnsc2790s02y-0 start" start="1"><li>바로 위 시점</li><li title="Isometric 3D view showing the shadow cast by light when the material moves upwards">머티리얼이 위로 움직일 때 그림자가 드리워지는 방식을 묘사한 3차원 시점</li></ol></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-3" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Dqr30VMTMcpEx8sUd4FARlw3gR5NRmqx%2Fmaterialshadow-dont.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-3">
+<p class="s-tag-caption dont">Don’t.</p><p title="Don’t express shadows without changing a surface’s elevation.">표면들의 높이를 바꾸지 않은 상태에서 그림자를 표현하면 안됩니다.</p><ol class="lst-kix_my8v7mfaiqdp-0 start" start="1"><li>바로 위 시점</li><li>빛과 높이가 아닌, 색상만으로 그림자를 표현한 경우를 묘사한 3차원 시점</li></ol></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">해상도</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>머티리얼은 무한한 해상도를 가집니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-4" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1yMoECU42SGRq8xav2IqcPAmfpm2qYZvA%2Fmaterialsurfaceproperties-do-infiniteresolution-1a.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-4"><p>머티리얼은 무한한 해상도를 가집니다.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">콘텐츠</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p title="Content is displayed in any shape and color on Material. Content does not add thickness to Material. Content is expressed without being a separate layer.">머티리얼 위에서 콘텐츠는 어떠한 모양이나 색상으로도 표시가 가능합니다. 콘텐츠는 머티리얼에 두께(thickness)를 더하지 않습니다. 콘텐츠는 분리된 레이어로 표시되지 않습니다.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xQcc7grFo-KO3yr2ba9XAmKmKasBNwa6%2Fmaterialcontent-shapecolor.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p class="s-tag-caption do">Do.</p><p title="Material can display any shape and color. Content can behave independent of Material, but is limited within the bounds of Material.">머티리얼은 어떠한 모양, 색상으로든 표시할 수 있습니다. 콘텐츠는 머티리얼로부터 독립적으로 행동할 수 있으나 머티리얼의 경계 안에서만 행동해야 합니다.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-5" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F13W28szpZTf5kSFCGhdt9tZkbpnfbHKS9%2Fmaterialcontent-behavior.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-5">
+<p class="s-tag-caption do">Do.</p><p title="Content behavior can be independent of surface behavior.">콘텐츠의 행동은 표면(Surface)의 행동과 독립적일 수 있습니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-6" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1u7RhQke_8cJNOA392JGJH37FSwzFhD0N%2Fmaterialcontent-dependent-behavior.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-6">
+<p class="s-tag-caption do">Do.</p><p title="Content behavior can depend on Material behavior.">콘텐츠 행동은 머티리얼 행동에 의존적일 수 있습니다.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading" title="Physical properties">물리적 속성들</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p title="Material is solid. User input and interaction cannot pass through material.">머티리얼은 꽉 차 있습니다. 사용자의 입력, 인터랙션은 머티리얼을 통과할 수 없습니다.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-7" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1bQO9zhMloD3HtBikFXTYxmTLJ_zFRiIV%2Fmaterialsurfaceproperties-do-physical.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-7">
+<p class="s-tag-caption do">Do.</p><p title="Input events only affect the surface of Material.">입력하는 행동은 머티리얼의 표면에만 영향을 미칩니다.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-8" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Rwp75SKdPmArFS5r8_WQsfAwJYzFsaYc%2Fmaterialsurfaceproperties-dont-passthrough.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-8">
+<p class="s-tag-caption dont">Don’t.</p><p title="Input events cannot pass through Material.">입력하는 행동은 머티리얼을 통과하지 못합니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p title="Multiple Material elements cannot occupy the same point in space simultaneously.">복수의 머티리얼 요소들은 동일한 공간을 동시에 점유할 수 없습니다.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-9" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B8v7jImPsDi-SlpSMkpDdVJKSEE%2Fwhatismaterial-properties-physical5.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-9">
+<p class="s-tag-caption do">Do.</p><p title="Prevent multiple Material elements from simultaneously occupying the same point in space, such as by separating elements with elevation.">분리된 요소들의 높이를 다르게 하는 등으로 복수의 머티리얼 요소들이 공간의 동일한 지점을 동시에 점유하지 않도록 하십시오.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-10" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B8v7jImPsDi-OWpqdE16bkt5LWc%2Fwhatismaterial-properties-physical6.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-10">
+<p class="s-tag-caption dont">Don’t.</p><p title="Multiple Material elements cannot occupy the same point in space simultaneously.">복수의 머티리얼 요소들은 공간의 동일한 지점을 동시에 점유할 수 없습니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p title="Material cannot pass through other Material. For example, one Material surface cannot pass through another Material surface when changing elevation.">머티리얼은 다른 머티리얼을 통과할 수 없습니다. 예를 들면, 하나의 머티리얼 표면의 높이가 달라지면서 다른 머티리얼 표면을 통과할 수 없다는 의미입니다.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ZFe2hECnZAtL0ZdtClzphYkGVT09jLO-%2Fmaterialproperties-clipping.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p class="s-tag-caption dont">Don’t.</p><p title="Material cannot pass through other Material.">머티리얼은 다른 머티리얼을 통과할 수 없습니다.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p title="Material does not behave like a gas.">머티리얼은 가스처럼 행동하지 않습니다.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<video aria-describedby="properties-figure-caption-11" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1V529DS-aIYyk4bahjNKxT0CqmJLdkMUz%2Fmaterialsurfaceproperties-dont-gas-1b.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-11">
+<p class="s-tag-caption dont">Don’t.</p><p>머티리얼은 가스처럼 행동하지 않습니다.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<video aria-describedby="properties-figure-caption-12" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1dpAn1QrcASliVgmYVdfm3HMpNXW4AYDM%2Fmaterialsurfaceproperties-do-enterexitseq-1a.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-12">
+<p class="s-tag-caption do">Do.</p><p>투명도, 크기, 혹은 위치의 변화를 통해 머티리얼은 들어가고 나옵니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p title="Material is not fluid like a liquid or gel, though it may display content with these properties.">머티리얼은 액체, 젤과 같은 속성을 가진 콘텐츠는 표시할 수 있더라도 그 자체로 액체는 아닙니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-13" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1WCcYH2Afmk_tZ18_s5HjZSv61B3MnQNb%2Fmaterialsurfaceproperties-dont-dripping.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-13">
+<p class="s-tag-caption dont">Don’t.</p><p>머티리얼은 액체나 젤처럼 행동하지 않습니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="properties-figure-caption-14" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hafXq2mG3HHr1MUK1g6fg7QR9IQTC9dV%2Fmaterialsurfaceproperties-dont-flow-1a.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="properties-figure-caption-14">
+<p class="s-tag-caption dont">Don’t.</p><p>머티리얼은 액체처럼 행동하지 않습니다.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Transforming Material Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Transforming Material</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material can change shape. Material can change opacity. Material grows and shrinks only along its plane. Material bends or folds within the depth of the...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material can change shape.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F15bSEWCZEjq6MddA362QGci7Q4AOkOQs-%2Fmaterialsurfaceproperties-changeshape-1b.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material can change shape.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material can change opacity.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="properties-figure-caption-15" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B6xUSjjSulxccFg0NEpVT0VYRkE%2Fmaterialsurfaceproperties-opacity.png" src="">
+</img></div>
+</div>
+<figcaption id="properties-figure-caption-15">
+<ol class="lst-kix_cesfpc8vsi95-0 start" start="1"><li>Material can change opacity uniformly across its entire surface.</li><li>Material can change opacity across a portion of its surface.</li></ol></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material grows and shrinks only along its plane.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F13eGrsIXeBzDU7l_RFcHotsN8rpWd7kYQ%2Fmaterialsurfaceproperties-plane.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p class="s-tag-caption do">Do.</p><p>Material grows and shrinks only along its plane.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material bends or folds within the depth of the UI.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F14aWvPjmL-sdwhT2gelqx3j5hQE7eR5KJ%2Fmaterialsurfaceproperties-plane-dont.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p class="s-tag-caption dont">Don’t.</p><p>Material never bends or folds in ways that exceed the depth of the UI.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material surfaces can join together to become a single Material surface.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F19__QV-l261owIymJUFARLcV_uyBgwPDj%2Fmaterialproperties-join.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Multiple Material surfaces can join together to become a single surface.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>When split, Material can rejoin. For example, if you remove a portion of Material from a surface, the surface will become whole again. </p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1SGXfwV9XdAXFaR49X7ZpNbj2tsH55ZrK%2Fmaterialproperties-slicejoin.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material can split and become whole again.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Movement  Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Movement </h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material can be spontaneously generated or dismissed anywhere in the environment. Material can move along any axis. Material surfaces can coordinate their motion. Material motion...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material can be spontaneously generated or dismissed anywhere in the environment.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1EUy2L0M-LyeNIu24-9GUUP5xvpzj2rjv%2Fmaterialmovement-appear.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material can be spontaneously generated or dismissed. </p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material can move along any axis.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F192Oe3mMnPtaY3S4AlkQWMRoqtIN6zz4w%2Fmaterialmovement-anyaxis.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material can move along various axes.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material surfaces can coordinate their motion.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1HRNO73Jkgoz48OuYa2JgTQdOma1jggjQ%2Fmaterialmovement-coordinate.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material surfaces can coordinate their motion.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Material motion along the z-axis is typically a result of user interaction.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 50.0%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11Gpm653O4qC39MSQAyv9sWn16Bm6f4h6%2Fmaterialmovement-z-interaction.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material surfaces exhibiting z-axis motion prompted by user interaction.</p></figcaption></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="attributes" class="container container--large js-waypoints-trigger article__section" data-section-title="Attributes" aria-label="Attributes">
+          <h2 class="article__chapter-title">
+            Attributes
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">depth, thickness, material, world, 3d</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Basic Material surface Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Basic Material surface</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>The basic Material surface is opaque white, with 1dp thickness, and casts a shadow. All UI elements in Material Design result from modifications to this...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>The basic Material surface is opaque white, with 1dp thickness, and casts a shadow. All UI elements in Material Design result from modifications to this surface.</p></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Behavior Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Behavior</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material surfaces can behave in certain ways: Surfaces can be divided into areas which display different types of behavior.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material surfaces can behave in certain ways:</p><ul class="lst-kix_qps7bqqax883-0 start"><li><strong>Rigid surfaces</strong> remain the same size through all interactions.</li><li><strong>Stretchable surfaces</strong> can grow or shrink along one or more edges up to a size limit, then behave as rigid surfaces.</li><li><strong>Pannable surfaces</strong> remain the same size throughout interactions. They can display additional content upon scrolling within the area, until reaching a content limit. When this limit is reached, they behave as rigid surfaces in that scroll direction.</li></ul><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="attributes-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F0B6xUSjjSulxca1NWSW91bXRRaDQ%2Fmaterialattributes-static-1b.png" src="">
+</img></div>
+</div>
+<figcaption id="attributes-figure-caption-0">
+<p>Material surface dimensions can be fixed with all content initially visible. The surface retains that size through all interactions.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="attributes-figure-caption-1" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F19e8l8UXWqC4n_7eMT0d8_YD6CvAwDX-M%2Fmaterialattributes-stretch-1.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-1">
+<p>Material surface dimensions can grow along one or more axes to accommodate additional content.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="attributes-figure-caption-2" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1JCxHxRkVWHO_OqZSLar9bIaah5p4yJAk%2Fmaterialattributes-pan.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-2">
+<p>Material surface dimensions can remain rigid, but content can scroll or pan across the surface.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>Composite surfaces</h2><p>Surfaces can be divided into areas which display different types of behavior.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="attributes-figure-caption-3" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F12LJku-D8qyXCzzx9tH2PVjx73E145zRo%2Fmaterialattributes-constructingsurfaces-1.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-3">
+<p>A single surface can contain multiple pannable surfaces, such as an embedded map (1) that pans independently of a scrollable list (2).</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="attributes-figure-caption-4" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1lA44inCPDrT5UShoK5fQYynz-KISRSs6%2Fmaterialattributes-constructingsurfaces-2.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-4">
+<p>A card can stretch to display a region that scrolls independently of other card content.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Stretchable surfaces Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Stretchable surfaces</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>A stretchable surface can be stretched before reaching a limit, at which point the entire surface becomes rigid. Surfaces can stretch vertically, horizontally, or in...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>A stretchable surface can be stretched before reaching a limit, at which point the entire surface becomes rigid. Surfaces can stretch vertically, horizontally, or in both directions.</p><p>Typically, user interaction with a surface will stretch it in one direction. For example, tapping “more details” can cause a card to grow vertically and display additional content.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1SdOX6Lmt-WHkMKkQ0ySDQmucI7X1oK8X%2Fsurfaces-stretchvert.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material stretch direction can be exclusively vertical.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F16aoHYwbnA-hU5bjAUYFWHscqArnDczz9%2Fsurfaces-stretchhoriz.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material stretch direction can be exclusively horizontal.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1TMUunFfJc9gZHZGevKpY7l6P142KIC-7%2Fsurfaces-stretchverthoriz.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Material stretch direction can be along both horizontal and vertical axes, either independently or simultaneously.</p></figcaption></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Surface positioning and movement (x/y) Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Surface positioning and movement (x/y)</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Surfaces can remain in a fixed position on the x- and y-axes, or can be moveable in any direction. Surface movement can be confined to...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Surfaces can remain in a fixed position on the x- and y-axes, or can be moveable in any direction.</p><p>Surface movement can be confined to a single axis, allow movement along a single axis at a time, or allow movement along both axes simultaneously.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="attributes-figure-caption-5" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1NXMLcGNl9IkAxArhrBJ2Fmt25y-xONWG%2Fsurfaces-movement-vert.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-5">
+<p>Surfaces can remain in a fixed position. The top app bar (1) remains in a fixed position while the card collection (2) scrolls only vertically behind it.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="attributes-figure-caption-6" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1aGew2FIQkfzmPmUNO1kDcmuan4nPPuG4%2Fsurfaces-movement-horizvert.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-6">
+<p>Surfaces (1,2) can move in any direction, although movement can be confined to a single axis at a time.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="attributes-figure-caption-7" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F17P0eYiNCieKok31ccVmFk8fMVN57wSwo%2Fsurfaces-movement-cards.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-7">
+<p>Surfaces can move in any direction.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Surfaces can move independently of each other, or their movement can affect or be dependent upon the movement of other surfaces.</p><p>A dependency can be based on a variety of mechanics, such as nearby surfaces moving when another surface expands, or the proportion of movement between surfaces moving in parallax.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="attributes-figure-caption-8" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1vsdOr2TZXmYXwVpbNhMlU6Mu9SiWCuTt%2Fsurfaces-movement-independent.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-8">
+<p>Surfaces can move independently of each other.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="attributes-figure-caption-9" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1g8_mzj8_gE8xHyFkFAmwrH-AAkbtlShs%2Fsurfaces-movement-dependent.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-9">
+<p>One surface’s movement can depend upon another’s movement.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Surface opacity Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Surface opacity</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Material surfaces can be transparent, semi-transparent, or opaque.</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Material surfaces can be transparent, semi-transparent, or opaque.</p><p>Text on transparent and semi-transparent surfaces may require background treatment to preserve legibility.</p><p>Transparent surfaces lack clear edges, making it difficult to determine where surfaces begin and end, and which surface content belongs to.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<video aria-describedby="attributes-figure-caption-10" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1dL9hqIWVh7qKrT9MaZOJDArm6mRNtHFS%2Fmaterialattributes-surfaceopacity-do.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-10">
+<p class="s-tag-caption caution">Caution.</p><ol class="lst-kix_pk8f0uy3gwk9-0 start" start="1"><li>Content on transparent or semi-transparent surfaces may need a background treatment to preserve legibility.</li><li>Isometric view</li></ol></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/text-legibility.html#legibility"}
+' href="../color/text-legibility.html#legibility" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1y-PNDwWgcOm79OvCC0VnIwpCHVbEIwwY%2Fcolor-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1y-PNDwWgcOm79OvCC0VnIwpCHVbEIwwY%2Fcolor-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Legibility</h2>
+<p class="object-card__body">Color plays an important role in text legibility.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 71.0526315789%;">
+<video aria-describedby="attributes-figure-caption-11" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F17k7OapqM62VIbYXPfjpQBJZlVZj2_Lii%2Fmaterialattributes-surfaceopacity-dont.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="attributes-figure-caption-11">
+<p class="s-tag-caption dont">Don’t.</p><ol class="lst-kix_4nckfqrojohh-0 start" start="1"><li>Don’t use transparent surfaces, as they have no opacity, making it difficult to identify the surface on which content appears. This top app bar is transparent, making it unclear if the text appears on the app bar or the surface behind it.</li><li>Isometric view</li></ol></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Scrim Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">Scrim</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__peek js-collapsible-peek"><p>Scrims are temporary treatments that can be applied to Material surfaces for the purpose of making content on a surface less prominent. They help direct...</p><span class="button button--underline">Read More</span></div><div class="collapsible__content js-collapsible-content"><div class="col-list"><section class="module col-1"><div class="module"><p>Scrims are temporary treatments that can be applied to Material surfaces for the purpose of making content on a surface less prominent. They help direct user attention to other parts of the screen, away from the surface receiving a scrim.</p><p>Scrims can be applied in a variety of ways, including:</p><ul class="lst-kix_32dh3hyajm0j-0 start"><li>Darkening or lightening the surface and its content</li><li>Reducing the opacity of the surface and its content</li></ul><p>Multiple surfaces on a screen at a time can display scrims.  Scrims can appear at any elevation, whether in the foreground or background.</p></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="attributes-figure-caption-12" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1mkiPGXrONwm7bwBGbBImLbE7wYfJqfsV%2Fsurfaces-attributes-scrim-back.png" src="">
+</img></div>
+</div>
+<figcaption id="attributes-figure-caption-12">
+<p>Foreground content attracts more attention when background content displays a scrim.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="attributes-figure-caption-13" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1XaJOY2td2t4vePm-2WiXcnNUW-mI39dQ%2Fsurfaces-attributes-scrim-front.png" src="">
+</img></div>
+</div>
+<figcaption id="attributes-figure-caption-13">
+<p>A scrim lightens content displayed on the front surface and directs attention to the surface behind it.</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+
+  </div>
+
+  <div class="container container--large">
+
+  <h2>Up next
+      <div class="article-controls">
+        
+      </div>
+  </h2>
+
+<div class="suggested-articles"><div>
+<a aria-label="Elevation" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../environment/elevation.html"}
+' href="../environment/elevation.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1fOdPazWBot482oimvKKkBDEDzSuDlVBs/environment-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Environment</h3>
+<h4 class="suggested-articles__item-subtitle">Elevation</h4>
+</a>
+<a aria-label="Light and Shadows" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../environment/light-shadows.html"}
+' href="../environment/light-shadows.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('../assets/1uIWIha4ZJ_cQnxbr3NEY-JzQMr91Zo_1/environment-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Environment</h3>
+<h4 class="suggested-articles__item-subtitle">Light and Shadows</h4>
+</a>
+<a aria-label="Understanding layout" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../layout/understanding-layout.html"}
+' href="../layout/understanding-layout.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1uWkHxg8tifFvm4r6Ve0lDpZNPJuHFb3X%2Flayout-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Layout</h3>
+<h4 class="suggested-articles__item-subtitle">Understanding layout</h4>
+</a></div></div>  </div>
+</article>
+    </main>
+
+
+
+    <div class="ui-mask js-ui-mask"></div>
+<div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true">
+    <header class="lightbox__header">
+      <div class="lightbox__header-title">
+        <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+        </span>
+        <h2 class="lightbox__title js-lightbox-title"></h2>
+      </div>
+
+      <div class="lightbox__actions">
+        <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle" data-comp="Tooltip" data-props-tooltip='{"tip": "View Specs", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>flip</i>
+        </button>
+
+        <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip" data-props-tooltip='{"tip": "Share", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
+        </button>
+
+      </div>
+    </header>
+
+    <div class="lightbox__template js-zoom-wrapper">
+      <div class="lightbox__content js-lightbox-content">
+<img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />      </div>
+<div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
+        <i class="material-icons">&#xE3F4;</i>
+        <span class="redline-sidebar__label-text">Image only</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
+        <i class="material-icons">format_shapes</i>
+        <span class="redline-sidebar__label-text">Measurements</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
+        <i class="material-icons">format_size</i>
+        <span class="redline-sidebar__label-text">Text</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
+        <i class="material-icons">palette</i>
+        <span class="redline-sidebar__label-text">Color</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
+        <i class="material-icons">rounded_corner</i>
+        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
+        <i class="material-icons">category</i>
+        <span class="redline-sidebar__label-text">Components</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
+        <i class="material-icons">notes</i>
+        <span class="redline-sidebar__label-text">Notes</span>
+      </button>
+    </div>
+<div class="redline-sidebar__toggles js-redline-layer-toggles">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="dimensions">Dimensions</label>
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="padding">Padding</label>
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="typography">Text baseline</label>
+  </div>
+</div><nav class="carousel__nav">
+  <button
+      class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Previous", "direction": "right"}'>
+    <i class="material-icons">chevron_left</i>
+  </button>
+
+  <button
+      class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Next", "direction": "left"}'>
+    <i class="material-icons">chevron_right</i>
+  </button>
+</nav><div class="zoom-buttons" data-comp="Zoom">
+  <div class="zoom-buttons__wrapper">
+
+    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">remove</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip='{"tip": "Reset", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">search</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom in", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">add</i>
+    </button>
+
+    <div class="zoom-buttons__extras">
+      <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker" data-props-tooltip='{"tip": "Color picker", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">colorize</i>
+      </button>
+      <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip='{"tip": "Ruler", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">straighten</i>
+      </button>
+    </div>
+
+  </div>
+</div>    </div>
+
+
+<aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+      <button type="button" class="mdc-dialog-share-close js-dialog-close">
+        <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+      </button>
+    </header>
+    <section id="mdc-dialog-description" class="mdc-dialog__body">
+      <input type="text" readonly class="mdc-dialog-share-url js-share-url" />
+      <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy">Copy</button>
+    </section>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside></div><div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
+  </div>
+</div>
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </body>
+</html>
