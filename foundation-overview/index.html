@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en" class="preload">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Foundation - 머티리얼 디자인</title>
+    <meta itemprop="name" property="og:title" name="twitter:title" content="Foundation">
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Build beautiful, usable products faster. Material Design is an adaptable system—backed by open-source code—that helps teams build high quality digital experiences.">
+    <meta itemprop="image" property="og:image" name="twitter:image" content="https://material.io/design/static/spec/images/share.png">
+    <meta itemprop="url" property="og:url" name="twitter:url" content="https://material.io/design/foundation-overview/index.html">
+    <meta property="og:site_name" content="Material Design">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+        .animatable {
+        opacity: 0;
+        position: relative;
+        top: 16px;         transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+                    top 500ms cubic-bezier(.4,0,.2,1);
+        }
+    </style>
+    <link href="../static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+    <link rel="preload" href="../static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+</head>
+<body class="header-show page--article left-rail" data-comp="Global " data-slug-id="foundation" data-spec-alias="mio-design" data-comp-id="comp_1" style="--scrollbar-width:17px;">
+
+<!-- 상단 플로팅 영역 헤더 시작 -->
+    <header class="header js-header" data-comp="Header">
+        <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+            <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+        </button>
+        <a href="/introduction/index.html" class="brand-lockup js-analytics-click">
+            <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+            <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+        </a>
+        <nav class="header__nav" role="navigation">
+        </nav>
+    </header>
+<!-- 상단 플로팅 영역 헤더 끝 -->
+
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs" data-comp-id="comp_5">
+    <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button="{&quot;eventName&quot;: &quot;togglenav&quot;}" data-comp-id="comp_6">
+      <i class="material-icons" title="Toggle Navigation">menu</i>
+    </button>
+
+
+<a href="/" class="brand-lockup js-analytics-click" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;breadcrumb navigation&quot;,
+    &quot;action&quot;: &quot;global click&quot;,
+    &quot;label&quot;: &quot;logo&quot;}
+">
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  <ol class="container container--large breadcrumbs__list anim-appear">
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click " href="../foundation-overview" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;breadcrumb navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../foundation-overview&quot;}
+">Foundation overview</a>
+      </li>
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link" href="../foundation-overview/foundation.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;breadcrumb navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../foundation-overview/foundation.html&quot;}
+">Foundation</a>
+      </li>
+      <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash" href="#addition" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;breadcrumb navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;#addition&quot;}
+">Addition</a>
+      </li>
+  </ol>
+</nav>
+
+<nav class="side-nav initialized" data-comp="SideNav" role="navigation" aria-hidden="false" data-comp-id="comp_7">
+
+<a href="/" class="brand-lockup js-analytics-click" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;global click&quot;,
+    &quot;label&quot;: &quot;logo&quot;}
+">
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+
+
+            <span class="side-nav__section-title">Material System</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click mdc-ripple-upgraded" href="../introduction" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../introduction&quot;}
+" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Introduction
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav1" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Material studies
+          </button>
+            <div class="side-nav__wrapper" id="_nav1">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -354px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/about-our-material-studies.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/about-our-material-studies.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            About our Material studies
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/basil.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/basil.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Basil
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/crane.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/crane.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Crane
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/fortnightly.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/fortnightly.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Fortnightly
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/owl.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/owl.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Owl
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/rally.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/rally.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Rally
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/reply.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/reply.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Reply
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-studies/shrine.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-studies/shrine.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Shrine
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Foundation</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface active js-analytics-click mdc-ripple-upgraded" href="../foundation-overview" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../foundation-overview&quot;}
+" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Foundation overview
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav3" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Environment
+          </button>
+            <div class="side-nav__wrapper" id="_nav3">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../environment/surfaces.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../environment/surfaces.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Surfaces
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../environment/elevation.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../environment/elevation.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Elevation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../environment/light-shadows.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../environment/light-shadows.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Light and shadows
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav4" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Layout
+          </button>
+            <div class="side-nav__wrapper" id="_nav4">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -228px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../layout/understanding-layout.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../layout/understanding-layout.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Understanding layout
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../layout/responsive-layout-grid.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../layout/responsive-layout-grid.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Responsive layout grid
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../layout/spacing-methods.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../layout/spacing-methods.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Spacing methods
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../layout/component-behavior.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../layout/component-behavior.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Component behavior
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../layout/density.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../layout/density.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Density
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav5" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Navigation
+          </button>
+            <div class="side-nav__wrapper" id="_nav5">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../navigation/understanding-navigation.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../navigation/understanding-navigation.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Understanding navigation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../navigation/navigation-transitions.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../navigation/navigation-transitions.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Navigation transitions
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../navigation/search.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../navigation/search.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Search
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav6" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Color
+          </button>
+            <div class="side-nav__wrapper" id="_nav6">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -186px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../color/the-color-system.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../color/the-color-system.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            The color system
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../color/applying-color-to-ui.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../color/applying-color-to-ui.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Applying color to UI
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../color/color-usage.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../color/color-usage.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Color usage
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../color/text-legibility.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../color/text-legibility.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Text legibility
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav7" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Typography
+          </button>
+            <div class="side-nav__wrapper" id="_nav7">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../typography/the-type-system.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../typography/the-type-system.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            The type system
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../typography/understanding-typography.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../typography/understanding-typography.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Understanding typography
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../typography/language-support.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../typography/language-support.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Language support
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav8" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Iconography
+          </button>
+            <div class="side-nav__wrapper" id="_nav8">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../iconography/product-icons.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../iconography/product-icons.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Product icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../iconography/system-icons.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../iconography/system-icons.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            System icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../iconography/animated-icons.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../iconography/animated-icons.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Animated icons
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav9" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Shape
+          </button>
+            <div class="side-nav__wrapper" id="_nav9">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -186px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../shape/about-shape.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../shape/about-shape.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            About shape
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../shape/shape-hierarchy.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../shape/shape-hierarchy.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Shape and hierarchy
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../shape/shape-as-expression.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../shape/shape-as-expression.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Shape as expression
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../shape/shape-motion.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../shape/shape-motion.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Shape and motion
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav10" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Motion
+          </button>
+            <div class="side-nav__wrapper" id="_nav10">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -186px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../motion/understanding-motion.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../motion/understanding-motion.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Understanding motion
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../motion/speed.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../motion/speed.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Speed
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../motion/choreography.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../motion/choreography.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Choreography
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../motion/customization.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../motion/customization.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Customization
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav11" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Interaction
+          </button>
+            <div class="side-nav__wrapper" id="_nav11">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../interaction/gestures.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../interaction/gestures.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Gestures
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../interaction/selection.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../interaction/selection.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Selection
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../interaction/states.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../interaction/states.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            States
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav12" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Communication
+          </button>
+            <div class="side-nav__wrapper" id="_nav12">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -414px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/confirmation-acknowledgement.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/confirmation-acknowledgement.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+            Confirmation &amp; acknowledgement
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/data-formats.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/data-formats.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Data formats
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/empty-states.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/empty-states.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Empty states
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/help-feedback.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/help-feedback.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Help &amp; feedback
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/imagery.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/imagery.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Imagery
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/launch-screen.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/launch-screen.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Launch screen
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/onboarding.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/onboarding.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Onboarding
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/writing.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/writing.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../communication/offline-states.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../communication/offline-states.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Offline states
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click mdc-ripple-upgraded" href="../guidelines-overview" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../guidelines-overview&quot;}
+" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Guidelines overview
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav14" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Material Theming
+          </button>
+            <div class="side-nav__wrapper" id="_nav14">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -102px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-theming/overview.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-theming/overview.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Overview
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../material-theming/implementing-your-theme.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../material-theming/implementing-your-theme.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Implementing your theme
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav15" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Components
+          </button>
+            <div class="side-nav__wrapper" id="_nav15">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -1086px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/app-bars-bottom.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/app-bars-bottom.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            App bars: bottom
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/app-bars-top.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/app-bars-top.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            App bars: top
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/backdrop.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/backdrop.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Backdrop
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/banners.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/banners.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Banners
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/bottom-navigation.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/bottom-navigation.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Bottom navigation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/buttons.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/buttons.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Buttons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/buttons-floating-action-button.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/buttons-floating-action-button.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+            Buttons: floating action button
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/cards.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/cards.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Cards
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/chips.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/chips.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Chips
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/data-tables.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/data-tables.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Data tables
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/dialogs.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/dialogs.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Dialogs
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/dividers.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/dividers.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Dividers
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/image-lists.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/image-lists.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Image lists
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/lists.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/lists.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Lists
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/menus.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/menus.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Menus
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/navigation-drawer.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/navigation-drawer.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Navigation drawer
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/progress-indicators.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/progress-indicators.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Progress indicators
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/selection-controls.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/selection-controls.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Selection controls
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/sheets-bottom.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/sheets-bottom.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Sheets: bottom
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/sheets-side.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/sheets-side.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Sheets: side
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/sliders.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/sliders.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Sliders
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/snackbars.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/snackbars.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Snackbars
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/tabs.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/tabs.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Tabs
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/text-fields.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/text-fields.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Text fields
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../components/tooltips.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../components/tooltips.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Tooltips
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav16" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -102px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../usability/accessibility.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../usability/accessibility.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Accessibility
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../usability/bidirectionality.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../usability/bidirectionality.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav17" aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Platform guidance
+          </button>
+            <div class="side-nav__wrapper" id="_nav17">
+    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -600px;">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-bars.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-bars.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android bars
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-fingerprint.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-fingerprint.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android fingerprint
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-haptics.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-haptics.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android haptics
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-icons.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-icons.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-navigating-between-apps.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-navigating-between-apps.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+            Android navigating between apps
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-notifications.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-notifications.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android notifications
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-permissions.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-permissions.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android permissions
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-settings.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-settings.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android settings
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-split-screen.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-split-screen.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android split-screen
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-swipe-to-refresh.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-swipe-to-refresh.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android swipe to refresh
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-text-selection-toolbar.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-text-selection-toolbar.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+            Android text selection toolbar
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/android-widget.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/android-widget.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Android widget
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click mdc-ripple-upgraded" href="../platform-guidance/cross-platform-adaptation.html" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;left rail navigation&quot;,
+    &quot;action&quot;: &quot;nav click&quot;,
+    &quot;label&quot;: &quot;../platform-guidance/cross-platform-adaptation.html&quot;}
+" tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+            Cross-platform adaptation
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+  </ul>
+</nav>
+    <main class="main" role="main">
+
+<article class="article" data-comp="Waypoints" data-comp-id="comp_8">
+  <div class="article__intro container container--large js-waypoints-trigger-initial anim-appear">
+    <div class="article__intro-text">
+      <h1 class="article__title animatable js-anim-trigger anim-appear">
+
+        Foundation (토대)
+
+            <div class="article-controls">
+              
+            </div>
+      </h1>
+
+
+        <div class="article__intro-text animatable js-anim-trigger anim-appear">
+        <div><p title="Material Design defines the qualities that can be expressed by UI regions, surfaces, and components. Design and strategize how your app is built using foundations that address design from both a broad and detailed perspective.">머티리얼 디자인은 UI 영역들, 표면들, 콤포넌트들로 표현될 수 있는 성질(Quality)들을 정의합니다. 넓은 관점과 디테일한 관점에서 디자인을 다루는 파운데이션들을 활용해, 앱을 디자인하고 빌드하는 전략을 수립해 보세요.</p>
+
+            <h2 title="Layout, color, and more">레이아웃, 색상, 그리고 그 이상</h2>
+            <p title="This section describes the Material environment and layout, its possible interactions, and the unified expression of qualities like color, shape, and motion.">
+                본 섹션은 머티리얼의 환경과 레이아웃, 가능한 인터랙션들, 그리고 색상 / 모양 / 모션과 같은 성질들을 통합된 방식으로 표현하는 방법에 대해 다룹니다.
+            </p></div>
+        </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger anim-appear">
+      <section id="addition" class="container container--large js-waypoints-trigger article__section anim-appear" data-section-title="Addition" aria-label="Addition">
+
+        <div class="article__copy">
+          
+        </div>
+      </section>
+
+  </div>
+
+  <div class="container container--large">
+
+  <h2>Up next
+      <div class="article-controls">
+        
+      </div>
+  </h2>
+
+<div class="suggested-articles"><div>
+<a aria-label="The Color System" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;suggested articles&quot;,
+    &quot;action&quot;: &quot;link click&quot;,
+    &quot;label&quot;: &quot;../color/the-color-system.html&quot;}
+" href="../color/the-color-system.html">
+<div class="suggested-articles__item-img mdc-ripple-surface mdc-ripple-upgraded" data-mdc-ripple-image="" style="background-image: url(&quot;../assets/1wpQ-cJvJW9vxhgYs-wjSS6f_flVj8RcR/color-thumbnail-2x1.png&quot;); --mdc-ripple-fg-size:136.003px; --mdc-ripple-fg-scale:1.93689;">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Color</h3>
+<h4 class="suggested-articles__item-subtitle">The Color System</h4>
+</a>
+<a aria-label="Responsive Layout Grid" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;suggested articles&quot;,
+    &quot;action&quot;: &quot;link click&quot;,
+    &quot;label&quot;: &quot;../layout/responsive-layout-grid.html&quot;}
+" href="../layout/responsive-layout-grid.html">
+<div class="suggested-articles__item-img mdc-ripple-surface mdc-ripple-upgraded" data-mdc-ripple-image="" style="background-image: url(&quot;https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F16H5k1CtJhkZlkT-MdCjW3KeExUfyObJQ%2Flayout-thumbnail-2x1.png&quot;); --mdc-ripple-fg-size:136.003px; --mdc-ripple-fg-scale:1.93689;">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Layout</h3>
+<h4 class="suggested-articles__item-subtitle">Responsive Layout Grid</h4>
+</a><br>
+
+<a aria-label="The Type System" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics="  {
+    &quot;event&quot;: &quot;trackEvent&quot;,
+    &quot;category&quot;: &quot;suggested articles&quot;,
+    &quot;action&quot;: &quot;link click&quot;,
+    &quot;label&quot;: &quot;../typography/the-type-system.html&quot;}
+" href="../typography/the-type-system.html">
+<div class="suggested-articles__item-img mdc-ripple-surface mdc-ripple-upgraded" data-mdc-ripple-image="" style="background-image: url(&quot;https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1RLTb3--hLg3VyzaEU-R6x0X2qKdNuwyi%2Ftypography-thumbnail-2x1.png&quot;); --mdc-ripple-fg-size:136.003px; --mdc-ripple-fg-scale:1.93689;">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Typography</h3>
+<h4 class="suggested-articles__item-subtitle">The Type System</h4>
+</a></div></div>  </div>
+</article>
+    </main>
+
+
+
+<div class="ui-mask js-ui-mask"></div>
+<div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true" data-comp-id="comp_9">
+    <header class="lightbox__header">
+      <div class="lightbox__header-title">
+        <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Close&quot;, &quot;direction&quot;: &quot;bottom&quot;}" data-comp-id="comp_10">
+          <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">close</i>
+        <div class="tooltip js-tooltip-bottom">
+      Close</div></span>
+        <h2 class="lightbox__title js-lightbox-title"></h2>
+      </div>
+
+      <div class="lightbox__actions">
+        <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;View Specs&quot;, &quot;direction&quot;: &quot;bottom&quot;}" data-comp-id="comp_11">
+          <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:NaN; --mdc-ripple-left:0px; --mdc-ripple-top:0px;">flip</i>
+        <div class="tooltip js-tooltip-bottom">
+      View Specs</div></button>
+
+        <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Share&quot;, &quot;direction&quot;: &quot;bottom&quot;}" data-comp-id="comp_12">
+          <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">share</i>
+        <div class="tooltip js-tooltip-bottom">
+      Share</div></button>
+
+      </div>
+    </header>
+
+    <div class="lightbox__template js-zoom-wrapper">
+      <div class="lightbox__content js-lightbox-content">
+<img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true">      </div>
+<div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar" data-comp-id="comp_13">
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Image only&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_14">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item mdc-ripple-upgraded" value="image" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons"></i>
+        <span class="redline-sidebar__label-text">Image only</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Image only</div></div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Measurements&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_15">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item mdc-ripple-upgraded" value="measurements" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons">format_shapes</i>
+        <span class="redline-sidebar__label-text">Measurements</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Measurements</div></div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Text&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_16">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item mdc-ripple-upgraded" value="text" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons">format_size</i>
+        <span class="redline-sidebar__label-text">Text</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Text</div></div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Color&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_17">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item mdc-ripple-upgraded" value="colors" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons">palette</i>
+        <span class="redline-sidebar__label-text">Color</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Color</div></div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Shape and Elevation&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_18">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item mdc-ripple-upgraded" value="shapes" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons">rounded_corner</i>
+        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Shape and Elevation</div></div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Components&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_19">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item mdc-ripple-upgraded" value="components" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons">category</i>
+        <span class="redline-sidebar__label-text">Components</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Components</div></div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Notes&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_20">
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item mdc-ripple-upgraded" value="notes" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+        <i class="material-icons">notes</i>
+        <span class="redline-sidebar__label-text">Notes</span>
+      </button>
+    <div class="tooltip js-tooltip-left">
+      Notes</div></div>
+<div class="redline-sidebar__toggles js-redline-layer-toggles">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="dimensions">Dimensions</label>
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="padding">Padding</label>
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="typography">Text baseline</label>
+  </div>
+</div><nav class="carousel__nav">
+  <button class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev mdc-ripple-upgraded" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Previous&quot;, &quot;direction&quot;: &quot;right&quot;}" data-comp-id="comp_21" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+    <i class="material-icons">chevron_left</i>
+  <div class="tooltip js-tooltip-right">
+      Previous</div></button>
+
+  <button class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next mdc-ripple-upgraded" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Next&quot;, &quot;direction&quot;: &quot;left&quot;}" data-comp-id="comp_22" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+    <i class="material-icons">chevron_right</i>
+  <div class="tooltip js-tooltip-left">
+      Next</div></button>
+</nav><div class="zoom-buttons" data-comp="Zoom" data-comp-id="comp_23">
+  <div class="zoom-buttons__wrapper">
+
+    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Zoom out&quot;, &quot;direction&quot;: &quot;top&quot;}" data-comp-id="comp_24">
+      <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:2.60817;">remove</i>
+    <div class="tooltip js-tooltip-top">
+      Zoom out</div></button>
+    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Reset&quot;, &quot;direction&quot;: &quot;top&quot;}" data-comp-id="comp_25">
+      <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:2.60817;">search</i>
+    <div class="tooltip js-tooltip-top">
+      Reset</div></button>
+    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Zoom in&quot;, &quot;direction&quot;: &quot;top&quot;}" data-comp-id="comp_26">
+      <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:2.60817;">add</i>
+    <div class="tooltip js-tooltip-top">
+      Zoom in</div></button>
+
+    <div class="zoom-buttons__extras">
+      <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker" data-props-tooltip="{&quot;tip&quot;: &quot;Color picker&quot;, &quot;direction&quot;: &quot;top&quot;}" data-comp-id="comp_27 comp_28">
+        <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">colorize</i>
+      <div class="tooltip js-tooltip-top">
+      Color picker</div></button>
+      <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip="{&quot;tip&quot;: &quot;Ruler&quot;, &quot;direction&quot;: &quot;top&quot;}" data-comp-id="comp_29 comp_30">
+        <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">straighten</i>
+      <div class="tooltip js-tooltip-top">
+      Ruler</div></button>
+    </div>
+
+  </div>
+</div>    </div>
+
+
+<aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share" data-comp-id="comp_31">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+      <button type="button" class="mdc-dialog-share-close js-dialog-close">
+        <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:19.2px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:6px; --mdc-ripple-top:6px;">close</i>
+      </button>
+    </header>
+    <section id="mdc-dialog-description" class="mdc-dialog__body">
+      <input type="text" readonly="" class="mdc-dialog-share-url js-share-url">
+      <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy mdc-ripple-upgraded" style="--mdc-ripple-fg-size:30.72px; --mdc-ripple-fg-scale:2.23777;">Copy</button>
+    </section>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside></div><div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true" data-comp-id="comp_32">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-button mdc-snackbar__action-button" aria-hidden="true"></button>
+  </div>
+</div>
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script><script type="text/javascript" id="" src="//www.google.com/insights/consumersurveys/async_survey?site=znr647dh46pklceehuqef2fsua"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
+</body>
