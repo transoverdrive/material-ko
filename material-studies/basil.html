@@ -1,0 +1,3036 @@
+<!DOCTYPE html>
+<html lang="en" class="preload">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Basil - Material Design</title>
+
+<meta itemprop="name"        property="og:title"       name="twitter:title"       content="Basil" />
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Basil is a recipe browsing app that demonstrates how Material Design can be used in the food lifestyle space." />
+    <meta itemprop="image"       property="og:image"       name="twitter:image"       content="https://material.io/design/https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1HjqRJnLjQU6oih8GHs2j5VlbRwQ8ZAyS%2Fbasil-thumbnail-2x1.png" />
+    <meta itemprop="url"         property="og:url"         name="twitter:url"         content="https://material.io/design/material-studies/basil.html" />
+    <meta property="og:site_name" content="Material Design" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+.animatable {
+        position: relative;
+        top: 16px;         transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+                    top 500ms cubic-bezier(.4,0,.2,1);
+      }
+    </style>
+    <link href="../static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+    <link rel="preload" href="../static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+  </head>
+
+  <body class="header-show page--article left-rail"
+        data-comp="Global "
+        data-slug-id="basil"
+        data-spec-alias="mio-design"
+ >
+
+<!-- 상단 플로팅 영역 헤더 시작 -->
+<header class="header js-header" data-comp="Header">
+        <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+            <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+        </button>
+        <a href="/introduction/index.html" class="brand-lockup js-analytics-click">
+            <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+            <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+        </a>
+        <nav class="header__nav" role="navigation">
+        </nav>
+    </header>
+<!-- 상단 플로팅 영역 헤더 끝 -->
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs" aria-hidden="true">
+    <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button='{"eventName": "togglenav"}'>
+      <i class="material-icons" title="Toggle Navigation">menu</i>
+    </button>
+
+
+<a href="/" class="brand-lockup js-analytics-click"
+   data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "global click",
+    "label": "logo"}
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+  <ol class="container container--large breadcrumbs__list">
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click "
+           href="../material-studies"
+           data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../material-studies"}
+'>Material studies</a>
+      </li>
+      <li class="breadcrumbs__crumb">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link"
+           href="../material-studies/basil.html"
+           data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"}
+'>Basil</a>
+      </li>
+      <li class="breadcrumbs__crumb disabled breadcrumbs__chapter">
+        <a class="breadcrumbs__link js-analytics-click js-breadcrumb-link js-breadcrumb-hash"
+           href="#about basil"
+           data-analytics='  {
+    "event": "trackEvent",
+    "category": "breadcrumb navigation",
+    "action": "nav click",
+    "label": "#about basil"}
+'>About Basil</a>
+      </li>
+  </ol>
+</nav>
+
+<nav class="side-nav" data-comp="SideNav" role="navigation">
+
+<a href="/" class="brand-lockup js-analytics-click"
+   data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "global click",
+    "label": "logo"}
+'>
+  <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+  <span class="brand-lockup__title brand-lockup__title--animate">Material Design</span>
+</a>
+
+
+            <span class="side-nav__section-title">Material System</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../introduction"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../introduction"}
+'>
+            Introduction
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface active js-submenu-toggle"
+                  aria-controls="_nav1"
+                  aria-expanded="true">
+            Material studies
+          </button>
+            <div class="side-nav__wrapper" id="_nav1">
+    <ul class="side-nav__submenu" data-menu-state="open">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/about-our-material-studies.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/about-our-material-studies.html"}
+'>
+            About our Material studies
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+side-nav__link--active js-header-show"
+              href="../material-studies/basil.html" aria-current="page" data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/basil.html"}
+'>
+            Basil
+          </a>
+
+            <div class="side-nav__articles">
+              <i class="side-nav__progress-bar">
+                <i class="side-nav__scrub js-submenu-scrub"></i>
+              </i>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-about-basil js-analytics-click" href="#about-basil" data-section-id="about-basil"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#about-basil"}
+'>
+                    <span class="js-anchor-text">About Basil</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-product-architecture js-analytics-click" href="#product-architecture" data-section-id="product-architecture"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#product-architecture"}
+'>
+                    <span class="js-anchor-text">Product architecture</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-layout js-analytics-click" href="#layout" data-section-id="layout"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#layout"}
+'>
+                    <span class="js-anchor-text">Layout</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-color js-analytics-click" href="#color" data-section-id="color"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#color"}
+'>
+                    <span class="js-anchor-text">Color</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-typography js-analytics-click" href="#typography" data-section-id="typography"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#typography"}
+'>
+                    <span class="js-anchor-text">Typography</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-iconography js-analytics-click" href="#iconography" data-section-id="iconography"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#iconography"}
+'>
+                    <span class="js-anchor-text">Iconography</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-components js-analytics-click" href="#components" data-section-id="components"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#components"}
+'>
+                    <span class="js-anchor-text">Components</span>
+                  </a>
+                </div>
+                <div>
+                  <a class="side-nav__article js-anchor-link js-anchor-link-motion js-analytics-click" href="#motion" data-section-id="motion"
+                     data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "#motion"}
+'>
+                    <span class="js-anchor-text">Motion</span>
+                  </a>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/crane.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/crane.html"}
+'>
+            Crane
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/fortnightly.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/fortnightly.html"}
+'>
+            Fortnightly
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/owl.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/owl.html"}
+'>
+            Owl
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/rally.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/rally.html"}
+'>
+            Rally
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/reply.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/reply.html"}
+'>
+            Reply
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-studies/shrine.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-studies/shrine.html"}
+'>
+            Shrine
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Foundation</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../foundation-overview"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../foundation-overview"}
+'>
+            Foundation overview
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav3"
+                  aria-expanded="false">
+            Environment
+          </button>
+            <div class="side-nav__wrapper" id="_nav3">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../environment/surfaces.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/surfaces.html"}
+'>
+            Surfaces
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../environment/elevation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/elevation.html"}
+'>
+            Elevation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../environment/light-shadows.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../environment/light-shadows.html"}
+'>
+            Light and shadows
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav4"
+                  aria-expanded="false">
+            Layout
+          </button>
+            <div class="side-nav__wrapper" id="_nav4">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/understanding-layout.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/understanding-layout.html"}
+'>
+            Understanding layout
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/density-resolution.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/density-resolution.html"}
+'>
+            Density &amp; resolution
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/responsive-layout-grid.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/responsive-layout-grid.html"}
+'>
+            Responsive layout grid
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/spacing-methods.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/spacing-methods.html"}
+'>
+            Spacing methods
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/component-behavior.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/component-behavior.html"}
+'>
+            Component behavior
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../layout/density.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../layout/density.html"}
+'>
+            Density
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav5"
+                  aria-expanded="false">
+            Navigation
+          </button>
+            <div class="side-nav__wrapper" id="_nav5">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../navigation/understanding-navigation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/understanding-navigation.html"}
+'>
+            Understanding navigation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../navigation/navigation-transitions.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/navigation-transitions.html"}
+'>
+            Navigation transitions
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../navigation/search.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../navigation/search.html"}
+'>
+            Search
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav6"
+                  aria-expanded="false">
+            Color
+          </button>
+            <div class="side-nav__wrapper" id="_nav6">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/the-color-system.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/the-color-system.html"}
+'>
+            The color system
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/applying-color-to-ui.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/applying-color-to-ui.html"}
+'>
+            Applying color to UI
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/color-usage.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/color-usage.html"}
+'>
+            Color usage
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../color/text-legibility.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../color/text-legibility.html"}
+'>
+            Text legibility
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav7"
+                  aria-expanded="false">
+            Typography
+          </button>
+            <div class="side-nav__wrapper" id="_nav7">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../typography/the-type-system.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/the-type-system.html"}
+'>
+            The type system
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../typography/understanding-typography.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/understanding-typography.html"}
+'>
+            Understanding typography
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../typography/language-support.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../typography/language-support.html"}
+'>
+            Language support
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav8"
+                  aria-expanded="false">
+            Iconography
+          </button>
+            <div class="side-nav__wrapper" id="_nav8">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../iconography/product-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/product-icons.html"}
+'>
+            Product icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../iconography/system-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/system-icons.html"}
+'>
+            System icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../iconography/animated-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../iconography/animated-icons.html"}
+'>
+            Animated icons
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav9"
+                  aria-expanded="false">
+            Shape
+          </button>
+            <div class="side-nav__wrapper" id="_nav9">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/about-shape.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/about-shape.html"}
+'>
+            About shape
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/shape-hierarchy.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-hierarchy.html"}
+'>
+            Shape and hierarchy
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/shape-as-expression.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-as-expression.html"}
+'>
+            Shape as expression
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../shape/shape-motion.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../shape/shape-motion.html"}
+'>
+            Shape and motion
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav10"
+                  aria-expanded="false">
+            Motion
+          </button>
+            <div class="side-nav__wrapper" id="_nav10">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/understanding-motion.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/understanding-motion.html"}
+'>
+            Understanding motion
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/speed.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/speed.html"}
+'>
+            Speed
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/choreography.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/choreography.html"}
+'>
+            Choreography
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../motion/customization.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../motion/customization.html"}
+'>
+            Customization
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav11"
+                  aria-expanded="false">
+            Interaction
+          </button>
+            <div class="side-nav__wrapper" id="_nav11">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../interaction/gestures.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/gestures.html"}
+'>
+            Gestures
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../interaction/selection.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/selection.html"}
+'>
+            Selection
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../interaction/states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../interaction/states.html"}
+'>
+            States
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav12"
+                  aria-expanded="false">
+            Communication
+          </button>
+            <div class="side-nav__wrapper" id="_nav12">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/confirmation-acknowledgement.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/confirmation-acknowledgement.html"}
+'>
+            Confirmation &amp; acknowledgement
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/data-formats.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/data-formats.html"}
+'>
+            Data formats
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/empty-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/empty-states.html"}
+'>
+            Empty states
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/help-feedback.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/help-feedback.html"}
+'>
+            Help &amp; feedback
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/imagery.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/imagery.html"}
+'>
+            Imagery
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/launch-screen.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/launch-screen.html"}
+'>
+            Launch screen
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/onboarding.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/onboarding.html"}
+'>
+            Onboarding
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/writing.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/writing.html"}
+'>
+            Writing
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../communication/offline-states.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../communication/offline-states.html"}
+'>
+            Offline states
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+      </ul>      <span class="side-nav__section-title">Material Guidelines</span>
+
+      <ul class="side-nav__menu side-nav__menu--sections">
+
+      <li class="side-nav__menu-item">
+          <a class="side-nav__link js-submenu-link mdc-ripple-surface js-analytics-click"
+             href="../guidelines-overview"
+             data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../guidelines-overview"}
+'>
+            Guidelines overview
+          </a>
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav14"
+                  aria-expanded="false">
+            Material Theming
+          </button>
+            <div class="side-nav__wrapper" id="_nav14">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-theming/overview.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/overview.html"}
+'>
+            Overview
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../material-theming/implementing-your-theme.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../material-theming/implementing-your-theme.html"}
+'>
+            Implementing your theme
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav15"
+                  aria-expanded="false">
+            Components
+          </button>
+            <div class="side-nav__wrapper" id="_nav15">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/app-bars-bottom.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-bottom.html"}
+'>
+            App bars: bottom
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/app-bars-top.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/app-bars-top.html"}
+'>
+            App bars: top
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/backdrop.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/backdrop.html"}
+'>
+            Backdrop
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/banners.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/banners.html"}
+'>
+            Banners
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/bottom-navigation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/bottom-navigation.html"}
+'>
+            Bottom navigation
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/buttons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons.html"}
+'>
+            Buttons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/buttons-floating-action-button.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/buttons-floating-action-button.html"}
+'>
+            Buttons: floating action button
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/cards.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/cards.html"}
+'>
+            Cards
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/chips.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/chips.html"}
+'>
+            Chips
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/data-tables.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/data-tables.html"}
+'>
+            Data tables
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/dialogs.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dialogs.html"}
+'>
+            Dialogs
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/dividers.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/dividers.html"}
+'>
+            Dividers
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/image-lists.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/image-lists.html"}
+'>
+            Image lists
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/lists.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/lists.html"}
+'>
+            Lists
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/menus.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/menus.html"}
+'>
+            Menus
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/navigation-drawer.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/navigation-drawer.html"}
+'>
+            Navigation drawer
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/progress-indicators.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/progress-indicators.html"}
+'>
+            Progress indicators
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/selection-controls.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/selection-controls.html"}
+'>
+            Selection controls
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/sheets-bottom.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-bottom.html"}
+'>
+            Sheets: bottom
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/sheets-side.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sheets-side.html"}
+'>
+            Sheets: side
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/sliders.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/sliders.html"}
+'>
+            Sliders
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/snackbars.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/snackbars.html"}
+'>
+            Snackbars
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/tabs.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tabs.html"}
+'>
+            Tabs
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/text-fields.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/text-fields.html"}
+'>
+            Text fields
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../components/tooltips.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../components/tooltips.html"}
+'>
+            Tooltips
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav16"
+                  aria-expanded="false">
+            Usability
+          </button>
+            <div class="side-nav__wrapper" id="_nav16">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/accessibility.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/accessibility.html"}
+'>
+            Accessibility
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../usability/bidirectionality.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../usability/bidirectionality.html"}
+'>
+            Bidirectionality
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+
+      <li class="side-nav__menu-item">
+          <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle"
+                  aria-controls="_nav17"
+                  aria-expanded="false">
+            Platform guidance
+          </button>
+            <div class="side-nav__wrapper" id="_nav17">
+    <ul class="side-nav__submenu" data-menu-state="closed">
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-bars.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-bars.html"}
+'>
+            Android bars
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-fingerprint.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-fingerprint.html"}
+'>
+            Android fingerprint
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-haptics.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-haptics.html"}
+'>
+            Android haptics
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-icons.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-icons.html"}
+'>
+            Android icons
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-navigating-between-apps.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-navigating-between-apps.html"}
+'>
+            Android navigating between apps
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-notifications.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-notifications.html"}
+'>
+            Android notifications
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-permissions.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-permissions.html"}
+'>
+            Android permissions
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-settings.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-settings.html"}
+'>
+            Android settings
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-split-screen.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-split-screen.html"}
+'>
+            Android split-screen
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-swipe-to-refresh.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-swipe-to-refresh.html"}
+'>
+            Android swipe to refresh
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-text-selection-toolbar.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-text-selection-toolbar.html"}
+'>
+            Android text selection toolbar
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/android-widget.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/android-widget.html"}
+'>
+            Android widget
+          </a>
+
+        </li>
+
+        <li>
+          <a class="side-nav__link mdc-ripple-surface js-submenu-link js-analytics-click
+"
+              href="../platform-guidance/cross-platform-adaptation.html"data-analytics='  {
+    "event": "trackEvent",
+    "category": "left rail navigation",
+    "action": "nav click",
+    "label": "../platform-guidance/cross-platform-adaptation.html"}
+'>
+            Cross-platform adaptation
+          </a>
+
+        </li>
+    </ul>
+  </div>
+
+      </li>
+
+  </ul>
+</nav>
+    <main class="main" role="main">
+
+<article class="article" data-comp="Waypoints">
+  <div class="article__intro container container--large js-waypoints-trigger-initial">
+    <div class="article__intro-text">
+      <h1 class="article__title animatable js-anim-trigger">
+
+        Basil
+
+            <div class="article-controls">
+              
+            </div>
+      </h1>
+
+
+        <div class="article__intro-text animatable js-anim-trigger">
+        <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<h2>Basil은 머티리얼 디자인 컴포넌트 및 테마를 사용하여 만든 흥미롭고 탐색하기 쉬운 브랜드 경험을 만드는 레시피 앱입니다.</h2>
+<figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F12WcnQceK_XdiYVO_0IOeeKzGpwelBSZT%2Fcasestudies-basil-main.png" src="">
+</img></div>
+</div>
+</figure></div>
+        </div>
+    </div>
+
+      <nav class="article__nav animatable js-anim-trigger">
+        <span class="eyebrow">Contents</span>
+        <ul>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#about-basil" data-section-id="about-basil"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#about-basil"}
+'>Basil에 대하여</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#product-architecture" data-section-id="product-architecture"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#product-architecture"}
+'>프로덕트 구조</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#layout" data-section-id="layout"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#layout"}
+'>레이아웃</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#color" data-section-id="color"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#color"}
+'>색상</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#typography" data-section-id="typography"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#typography"}
+'>타이포그라피</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#iconography" data-section-id="iconography"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#iconography"}
+'>아이콘</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#components" data-section-id="components"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#components"}
+'>컴포넌트</a>
+            </li>
+            <li class="article__nav-item">
+              <a class="article__nav-link js-anchor-link js-analytics-click" href="#motion" data-section-id="motion"
+                 data-analytics='  {
+    "event": "trackEvent",
+    "category": "content",
+    "action": "link click",
+    "label": "#motion"}
+'>모션</a>
+            </li>
+        </ul>
+      </nav>
+  </div>
+
+  <hr />
+
+  <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger">
+      <section id="about-basil" class="container container--large js-waypoints-trigger article__section" data-section-title="About Basil" aria-label="About Basil">
+          <h2 class="article__chapter-title">
+            About Basil
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div><p>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<br>
+Basil은 요리사와 바텐더가 만든 레시피를 쉽게 찾아 볼 수 있도록 해주는 서비스입니다. 이 서비스는 ‘접근하기 쉬운’, ‘직접적인’, 그리고 ‘놀라운’이라는 컨셉을 바탕으로 디자인되었습니다.
+</br></p>
+<figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1qQwTNqstINSoIBp_nH5X3AaJpeiM1Pen%2Fcasestudies-basil-brandattributes.png" src="">
+</img></div>
+</div>
+</figure><div class="collapsible" data-comp="Collapsible"><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">화려하지만, 기능적 미학을 담은</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><p>Basil의 대담한 타이포그래피와 색상은 컨텐츠에 대한 단순한 접근법과 결합되어, 탐색하고 이해하기에 쉬운 앱을 만듭니다.</p></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="product-architecture" class="container container--large js-waypoints-trigger article__section" data-section-title="Product architecture" aria-label="Product architecture">
+          <h2 class="article__chapter-title">
+            프로덕트 구조
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil 앱의 정보 구조(IA)에는 카탈로그 구조가 있습니다. 카탈로그에는 분류된 계층 데이터가 들어있으며, 최상위 수준에는 각각 하위 데이터가 포함될 수 있는 동등한 데이터가 포함됩니다.</p><h2>4개의 최상위 섹션 </h2><p>Basil은 다음과 같은 4가지 최상위 섹션으로 나뉩니다 : 에피타이저, 주 요리, 디저트, 칵테일
+        각각의 요리법에는 두 가지 하위 섹션이 포함되어 있습니다 : 재료, 지침</p><h2>내비게이션에 대한 새로운 접근 방식</h2><p>보통 카탈로그 구조에 네비게이션 드로워가 사용되는 경우가 많지만, Basil의 인터랙션 모델은 여러가지 컴포넌트를 사용하여 새롭고, 때로는 놀라운 경험을 만든다는 점에서 차별화됩니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="product-architecture-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BsZDQcuD127bq8PxBF5WgqBbouG6UGPa%2Fcasestudies-basil-family.png" src="">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-0">
+<p>태블릿, 모바일 및 데스크톱에 제공된 모습</p></figcaption>
+</figure></div></section></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">데스크톱과 태블릿 내비게이션</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>데스크톱 및 태블릿에서 Basil의 주요 섹션은 상단의 고정 탭을 통해 접근할 수 있습니다. 데스크톱에서는 각 섹션을 상하로 스크롤하여 레시피를 찾고, 태블릿에서는 좌우로 스크롤하여 찾습니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="product-architecture-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1qIOwaCT0ABa0Ukc408amfEXd_WuVLpDE%2Fcasestudies-basil-prodarch-desktop.png" src="">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-1">
+<p>데스크톱에서 Basil의 주 요리 섹션은 상하로 스크롤됩니다. 50%까지 크기 조정됩니다.</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"}
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">탭</h2>
+<p class="object-card__body">탭은 앱 내 콘텐츠의 상위 레벨 콘텐츠를 체계화해 view, 데이터셋, 앱의 기능 등을 전환할 수 있게 해줍니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="product-architecture-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1n59sfc7oZByAeeH13zCR6itqaf-a0Zij%2Fcasestudies-basil-prodarch-tablet.png" src="">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-2">
+<p>태블릿에서 Basil의 주 요리 섹션은 좌우로 스크롤됩니다. 50%까지 크기 조정됩니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>레시피를 선택하면 Ingredient와 Directions을 전환하기 위해 탭이 사용됩니다. 커스터마이징된 Stepper 컴포넌트를 사용하여 레시피 순서를 표시합니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="product-architecture-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1avAziEos1Yx7IR9qnFW4P_hrbFK0AkdB%2Fcasestudies-basil-prodarch-tablet-tabs.png" src="">
+</img></div>
+</div>
+<figcaption id="product-architecture-figure-caption-3">
+<p>태블릿에서 Basil의 구체적인 레시피 화면은 tab과 stepper를 사용합니다.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">모바일 내비게이션</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>모바일에서 Basil의 메인 섹션은 내비게이션 드로워를 보여주기 위해 아래로 스와이프해야 합니다.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<video aria-describedby="product-architecture-figure-caption-4" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F18aCZQpR4osC6JkGc0UbWmyYa7oEKnj5f%2F01-navdrawer.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="product-architecture-figure-caption-4">
+<p>Basil의 내비게이션 드로워</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/navigation-drawer.html#navigation-drawer"}
+' href="../components/navigation-drawer.html#navigation-drawer" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Rv9sL5l__mR-9cm-3Nm6Bue4okqjmrPx%2Fnav-drawer-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Rv9sL5l__mR-9cm-3Nm6Bue4okqjmrPx%2Fnav-drawer-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">내비게이션 드로워</h2>
+<p class="object-card__body">내비게이션 드로워는 앱의 목적지들로 이동할 수 있는 방법을 제공합니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"}
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">탭</h2>
+<p class="object-card__body">탭은 앱 내 콘텐츠의 상위 레벨 콘텐츠를 체계화해 view, 데이터셋, 앱의 기능 등을 전환할 수 있게 해줍니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-bottom.html#sheets-bottom"}
+' href="../components/sheets-bottom.html#sheets-bottom" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf%2Fsheets-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf%2Fsheets-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">시트: 하단</h2>
+<p class="object-card__body">하단 시트는 스크린 하단에 고정 노출되는 추가 콘텐츠를 표현하는 표면(surface)입니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>섹션이 선택된 후에는, 레시피를 찾기 위해 좌우로 스크롤해야 합니다.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1VKW4PKHYZRpiMEnExiEpAUD2Ehnl1QC1%2F02-horizontalscroll.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+</figure></div></section></div><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>레시피가 선택했을 때, 하단 탭은 재료와 순서를 접근하도록 합니다.</p><p>하나의 탭이 선택되면, 하단 시트가 애니메이션을 통해 선택한 콘텐츠로 화면을 채웁니다. 이 시트에서 사용자는 재료와 순서를 전환하거나 아래로 스와이프하여 화면 밖으로 이동할 수 있습니다.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<video aria-describedby="product-architecture-figure-caption-5" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1HkUavgJxUP_XButPD9gxFIvmjFBWuZ6d%2F03-tabdrawer.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="product-architecture-figure-caption-5">
+<p>모바일에서, 아래 시트를 통해 특정한 레시피의 재료와 순서를 찾을 수 있습니다.</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="layout" class="container container--large js-waypoints-trigger article__section" data-section-title="Layout" aria-label="Layout">
+          <h2 class="article__chapter-title">
+            레이아웃
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">그리드 시스템</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="figure col-1"><div class="figure"><p>Basil은 유연한 열과 패딩을 사용하는 반응형의 그리드 시스템을 사용합니다. 따라서 화면의 너비(모바일, 태블릿 또는 데스크톱)에 따라 크기가 조정됩니다.</p><p>Basil은 레이아웃 그리드의 각 영역 안에 서체를 가운데로 정렬합니다.</p><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 73.6842105263%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1bxRegoCnKG_6atpDwTj6igLDv1r6la2H%2Fcasestudies-basil-grid.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Basil의 그리드 시스템, 50%까지 크기 조정됩니다.</p></figcaption></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../layout/responsive-layout-grid.html#responsive-layout-grid"}
+' href="../layout/responsive-layout-grid.html#responsive-layout-grid" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11oASqhi0SLKrWq_KRSNoiX2X2KfYK43I%2Flayout-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11oASqhi0SLKrWq_KRSNoiX2X2KfYK43I%2Flayout-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">반응형 레이아웃 그리드</h2>
+<p class="object-card__body">The Material Design responsive layout grid adapts to screen size and orientation. This UI guidance includes a flexible grid that ensures consistency across layouts.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/image-lists.html#image-list"}
+' href="../components/image-lists.html#image-list" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1LPtdxSR57BqRqZ9JKL6X-CuMBgQYsob8%2Fimage-list-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1LPtdxSR57BqRqZ9JKL6X-CuMBgQYsob8%2Fimage-list-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">이미지 목록</h2>
+<p class="object-card__body">Image lists display a collection of images in an organized grid.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../layout/component-behavior.html#component-behavior"}
+' href="../layout/component-behavior.html#component-behavior" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1SRT0wdjmgW-KANP2R6zkeb6dq1uuSn7k%2Flayout-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1SRT0wdjmgW-KANP2R6zkeb6dq1uuSn7k%2Flayout-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">콤포넌트 행동</h2>
+<p class="object-card__body">The following guidance describes how components behave, both in the grid and between breakpoints.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil의 헤드라인은 모바일 화면의 너비에 따라 서체의 크기가 반응형으로 변화합니다.</p></div></section><section class="module-module col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="layout-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1-AkPSRLigxtb_QiVLU_oAMdQsj1DbQQf%2Fcasestudies-basil-layout-type-1.png" src="">
+</img></div>
+</div>
+<figcaption id="layout-figure-caption-0"><p>레시피 제목 크기는 화면의 너비를 채우기 위해 동적으로 변화합니다.</p></figcaption>
+</figure></div><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="layout-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1GZdHQ-Y01Pcb6pkVg-uFzcMmf4YIht-h%2Fcasestudies-basil-layout-type-2.png" src="">
+</img></div>
+</div>
+<figcaption id="layout-figure-caption-1"><p>레시피 제목 크기는 화면의 너비를 채우기 위해 동적으로 변화합니다.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">계층</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil은 UI 요소 간의 계층을 표시하기 위해 음영을 사용하지 않습니다. 대신, 컨텐츠는 패럴럭스 모션과 투명도를 사용하여 서로 다른 계층에 배치됩니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="layout-figure-caption-2" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1rsPHidaFHFb4_pa3OO8xJjIZvKbTH7UY%2Fcasestudies-basil-elevation.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="layout-figure-caption-2">
+<p>이 세 가지 레이어들은 패럴럭스 모션을 통해 각각의 레이어와 구분됩니다.</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../environment/elevation.html#elevation"}
+' href="../environment/elevation.html#elevation" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xD7lAloH7IQN5yUKUJ86_VRBemCcOiBY%2Fenvironment-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xD7lAloH7IQN5yUKUJ86_VRBemCcOiBY%2Fenvironment-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">계층</h2>
+<p class="object-card__body">계층은 두 개의 면 사이의 상대적인 Z축 거리입니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-bottom.html#sheets-bottom"}
+' href="../components/sheets-bottom.html#sheets-bottom" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf%2Fsheets-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf%2Fsheets-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">시트: 하단</h2>
+<p class="object-card__body">하단 시트는 스크린 하단에 고정 노출되는 추가 콘텐츠를 표현하는 표면(surface)입니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"}
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">탭</h2>
+<p class="object-card__body">탭은 앱 내 콘텐츠의 상위 레벨 콘텐츠를 체계화해 view, 데이터셋, 앱의 기능 등을 전환할 수 있게 해줍니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>Basil은 투명도를 사용하여 UI 요소의 레이어를 표시함으로써 계층의 차이를 표현합니다.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<video aria-describedby="layout-figure-caption-3" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1wdt7pZhLccRMPv3MDktqMXqpKbb3bPC0%2F04-tabdrawer.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="layout-figure-caption-3"><p>약간의 투명한 하단 시트는 화면에서 애니메이션을 통해 사용자는 아래 메인 레시피 화면을 볼 수 있습니다. 이러한 레이어들은 사용자가 새로운 화면으로 이동하지 않고, 보고 있던 컨텐츠 위의 시트와 상호작용함을 보여줍니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>텍스트가 이미지 위로 스크롤될 때, 이중 톤으로 이미지 처리되어 텍스트를 읽을 수 있도록 합니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 73.6842105263%;">
+<video aria-describedby="layout-figure-caption-4" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1srZVfCOGZ7h8of45KkKvNZ-C1sGZNWDs%2Fcasestudies-basil-elevationtransparency-1a.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="layout-figure-caption-4">
+<p>이중 톤의 이미지 처리</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="color" class="container container--large js-waypoints-trigger article__section" data-section-title="Color" aria-label="Color">
+          <h2 class="article__chapter-title">
+            컬러
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">컬러 테마</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/the-color-system.html#the-color-system"}
+' href="../color/the-color-system.html#the-color-system" rel="noopener" target="_blank">
+<div class="object-card__copy">
+<h2 class="object-card__title">컬러 시스템</h2>
+<p class="object-card__body">머티리얼 디자인 컬러 시스템은 UI 컬러 선택을 도와줍니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../color/applying-color-to-ui.html#applying-color-to-ui"}
+' href="../color/applying-color-to-ui.html#applying-color-to-ui" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO%2Fcolor-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1p5B6BYsMGBXv5sXiUtfrZSW8taO3GRQO%2Fcolor-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">UI에 컬러 적용하기</h2>
+<p class="object-card__body">|UI에서 컬러는 다양한 역할을 합니다: 의미 담기, 룩앤필 표현하기 등</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p> </p><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil은 과일과 채소의 깊고 풍부한 색에 영감을 받은 색상을 사용합니다: </p><ul class="lst-kix_esa6fmnj94jc-0 start"><li>Basil의 <strong>메인 컬러 </strong>는 올리브 그린입니다.</li><li>Basil’s <strong>서브 컬러</strong>는 오렌지입니다.</li></ul><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="color-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1-FoNiTdukoNd1lKRaIqtBe2Wt_YQqTQO%2Fcasestudies-basil-color.png" src="">
+</img></div>
+</div>
+<figcaption id="color-figure-caption-0">
+<p>Basil의 컬러 테마</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="typography" class="container container--large js-waypoints-trigger article__section" data-section-title="Typography" aria-label="Typography">
+          <h2 class="article__chapter-title">
+            타이포그래피
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Typefaces Section" class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button><h1 class="collapsible__heading">서체</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="typography-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Wm88g4xxsJDHbg3m1twW0Pq0YQ1JJbpe%2Fcasestudies-basil-type.png" src="">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-0">
+<p>        1.        Montserrat </p><p>        2.        Lekton</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">서체 척도</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil의 서체 척도는 두 가지 서체를 사용합니다: <a class="js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Montserrat"}
+' href="https://fonts.google.com/specimen/Montserrat" rel="noopener" target="_blank">
+  Montserrat</a>, 그리고 <a class="js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "crosslink",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Lekton"}
+' href="https://fonts.google.com/specimen/Lekton" rel="noopener" target="_blank">
+  Lekton.</a> 두 가지 서체는 Basil이라는 특징을 더하면서 어울리는 한 쌍을 이룹니다. </p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 119.473684211%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="typography-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="119.473684211%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F19OGNWKvZlFyK6lolnTdSxuueA0eSoAyE%2Fcasestudies-basil-typescale.png" src="">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-1">
+<p>Basil의 서체 척도</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/the-type-system.html#the-type-system"}
+' href="../typography/the-type-system.html#the-type-system" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD%2Ftypography-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD%2Ftypography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">서체 시스템</h2>
+<p class="object-card__body">Use typography to present your design and content as clearly and efficiently as possible.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Montserrat"}
+' href="https://fonts.google.com/specimen/Montserrat" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT%2Fgooglefonts-ext.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT%2Fgooglefonts-ext.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Montserrat</h2>
+<p class="object-card__body">Google Fonts</p>
+</div>
+<p class="object-card__label">
+      Related Link
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/understanding-typography.html#understanding-typography"}
+' href="../typography/understanding-typography.html#understanding-typography" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M%2Ftypography-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M%2Ftypography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">타이포그래피의 이해</h2>
+<p class="object-card__body">Typography is critical in establishing hierarchy and expressing brand presence that supports an effective digital experience.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">Montserrat</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Montserrat는 넓은 글자 형태를 가진 산세리프 폰트입니다. Basil은 디스플레이 서체뿐만 아니라 본문, 캡션, 버튼 텍스트용으로 사용됩니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="typography-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1AevWR8BX2U_7OMGe2l1b2Ulnb3V0dfKI%2Fcasestudies-basil-type-montserrat-1.png" src="">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-2">
+<p>Montserrat의 글자 형태</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="typography-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F12HCpe6MA5iazXr1uXE3GgKn3NurhD9bB%2Fcasestudies-basil-type-montserrat-2.png" src="">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-3">
+<p>Montserrat와 Roboto 비교</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/the-type-system.html#the-type-system"}
+' href="../typography/the-type-system.html#the-type-system" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD%2Ftypography-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1kJvRyz96c_NZTbUeiFGJmLAE7izCHbWD%2Ftypography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">서체 시스템</h2>
+<p class="object-card__body">Use typography to present your design and content as clearly and efficiently as possible.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "https://fonts.google.com/specimen/Lekton"}
+' href="https://fonts.google.com/specimen/Lekton" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT%2Fgooglefonts-ext.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Y62KFX6HT9pwpMoIOeSmdX73CP5MBmUT%2Fgooglefonts-ext.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Lekton</h2>
+<p class="object-card__body">Google Fonts</p>
+</div>
+<p class="object-card__label">
+      Related Link
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../typography/understanding-typography.html#understanding-typography"}
+' href="../typography/understanding-typography.html#understanding-typography" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M%2Ftypography-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1YYK5nf3Kp2e2F9ZSGEn8e_2mKydNaw6M%2Ftypography-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Understanding typography</h2>
+<p class="object-card__body">Typography is critical in establishing hierarchy and expressing brand presence that supports an effective digital experience.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">Lekton</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Lekton은 Olivetti 타자기에 사용된 일부 서체에서 영감을 받았습니다. 글리프들은 ‘trispaced’되어 있는데, 이는 모두 동일한 3개의 모듈식 유닛을 사용하여 제작 되었다는 것을 의미합니다. 이 서체는 동일 간격을 가진 글꼴과 유사하게 예측 가능한 정렬 구조를 가지고 있습니다. Lekton은 Basil의 작은 헤드라인과 서브타이틀로 사용됩니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 73.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="typography-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="73.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1a76Di-rgQe8VrSNPxglJLVCNY5Uv1bqC%2Fcasestudies-basil-type-lekton-1.png" src="">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-4">
+<p>Lekton의 글자 형태</p></figcaption>
+</figure><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="typography-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1GO7KSKL130W4N3L_5LE9yIqmgr_vHQLd%2Fcasestudies-basil-type-lekton-2.png" src="">
+</img></div>
+</div>
+<figcaption id="typography-figure-caption-5"><p>Lekton과 Roboto 비교</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="iconography" class="container container--large js-waypoints-trigger article__section" data-section-title="Iconography" aria-label="Iconography">
+          <h2 class="article__chapter-title">
+            아이콘
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil의 커스텀 아이콘들은 컨텐츠에 접근 가능하도록 단순하고 기발하게 디자인되었습니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="iconography-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ci_vsM0iYaIQw_-Senaude0uTFgeZgQh%2Fcasestudies-basil-icons-alt.png" src="">
+</img></div>
+</div>
+<figcaption id="iconography-figure-caption-0">
+<p>1.일관성을 유지하기 위해, Basil의 모든 아이콘은 동일한 기본 그리드 구조를 공유합니다. 2. Basil의 아이콘 모음</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil의 아이콘은 메인 컬러(올리브 그린)을 사용합니다. Basil의 서브 컬러(오렌지)는 아이콘에 사용되어 음식 유형에 포함 여부를 나타냅니다.(예: 글루텐 및 계란)</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="iconography-figure-caption-1" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1E_9kEb3hczRAuv1TKd5u2_CDmKVGzOKm%2Fcasestudies-basil-icons-2color.png" src="">
+</img></div>
+</div>
+<figcaption id="iconography-figure-caption-1">
+<p>Basil의 서브 컬러는 글루텐과 계란이 없는 레시피를 나타내기 위해 사용됩니다.</p></figcaption>
+</figure></div></section></div></div>
+        </div>
+      </section>
+<hr />      <section id="components" class="container container--large js-waypoints-trigger article__section" data-section-title="Components" aria-label="Components">
+          <h2 class="article__chapter-title">
+            컴포넌트
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">리스트</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil은 리스트 컴포넌트를 사용하여 각 레시피의 성분을 표시합니다. 각 리스트에는 Basil의 타이포그래피와 아이콘이 사용되며, 각 성분과 수량을 연결하는 점선으로 맞춤화되었습니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-0" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1huFtM-qN_f8qUvfWyI6ZcYof9YKWyp12%2Fcasestudies-basil-lists-1.png" src="">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-0">
+<p>Basil의 맞춤화된 리스트</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">하단 시트</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module-module col-2"><div class="module"><p>모바일에서는 Basil은 레시피 재료와 순서를 제공하기 위해 확장되는 하단 시트를 사용했습니다.</p><p>하단 탭을 누르면 컨텐츠 위에 화면이 올라오며, 이 화면에서 레시피 재료 탭과 순서 탭을 클릭하여 전환할 수 있습니다.</p><p>시트의 배경은 생성된 화면 위에 있음을 사용자에게 알리고 사용자는 언제든지 시트를 사라지게 할 수 있습니다.</p></div><div class="module"><figure class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 177.777777778%;">
+<video aria-describedby="components-figure-caption-1" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1HkUavgJxUP_XButPD9gxFIvmjFBWuZ6d%2F03-tabdrawer.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="components-figure-caption-1">
+<p>Basil의 확장된 하단 시트</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/lists.html#lists"}
+' href="../components/lists.html#lists" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1cIfap6uWJWc2t3lZgjkvIF-asVpw7qGd%2Flist-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1cIfap6uWJWc2t3lZgjkvIF-asVpw7qGd%2Flist-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">리스트</h2>
+<p class="object-card__body">리스트는 텍스트와 이미지의 수직 배열입니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/sheets-bottom.html#sheets-bottom"}
+' href="../components/sheets-bottom.html#sheets-bottom" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf%2Fsheets-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F121lJtMhycHeqlkvhz2gJh-IZqZ88jmbf%2Fsheets-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">시트: 하단</h2>
+<p class="object-card__body">하단 시트는 스크린 하단에 고정 노출되는 추가 콘텐츠를 표현하는 표면(surface)입니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../components/tabs.html#tabs"}
+' href="../components/tabs.html#tabs" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1hXJsK6rlAyT2CSiK5i_uR4sRPzWRYzoV%2Ftabs-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">탭</h2>
+<p class="object-card__body">탭은 앱 내 콘텐츠의 상위 레벨 콘텐츠를 체계화해 view, 데이터셋, 앱의 기능 등을 전환할 수 있게 해줍니다.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">탭</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>데스크톱 및 태블릿에서 Basil은 탭을 통해 섹션을 이동합니다. 탭은 화면 중앙과 정렬된 고정 너비 영역에 균등하게 분포됩니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 33.6842105263%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-2" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="33.6842105263%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1iwyeA1792IBDIq4Sadp7h-7HbXHnv8sg%2Fcasestudies-basil-tabs-1.png" src="">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-2">
+<p>Basil은 데스크톱 및 태블릿에서의 탐색을 위해 맞춤화된 탭을 사용합니다.(62.5% 축소될 때까지 노출)</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-3" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1haVryl-_EQGxUwZGIXXrXZlLdEJv8j-W%2Fcasestudies-basil-tabs-2-625p.png" src="">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-3">
+<br>
+<p>1. 머티리얼 가이드 기준 탭</p><br>
+<p>2. Basil의 데스크톱 및 태블릿 네비게이션 탭은 맞춤화된 타이포그래피, 컬러, 상태값을 사용합니다. 선택된 탭의 상태에서는 더 굵은 텍스트를 사용합니다.(62.5% 축소될 때까지 노출)</p></br></br></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>모바일에서, 탭은 레시피 재료와 순서 사이를 전환할 수 있게 해줍니다. 기본적으로 이러한 탭은 레시피 화면 하단에 표시됩니다. 탭을 선택하면 레시피의 재료 탭과 순서 탭이 화면 상단으로 이동합니다.</p><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xbdlXqRDjK-qHMyj559wKWHBfW20etEs%2Fcasestudies-basil-tabs-2.png" src="">
+</img></div>
+</div>
+</figure><figcaption>
+<p>(1)먼저 레시피의 탭이 화면 하단에 표시됩니다. (2)이를 누르면 탭이 화면 상단으로 이동하여 사용자가 화면 이동을 할 수 있습니다.</p></figcaption></div></section></div><div class="col-list rich-media"><section class="module col-1"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="1520px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-4" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11-ioD0Ccc9Or3zxyRvnIYIajANZQurRT%2Fcasestudies-basil-tabs-3.png" src="">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-4">
+<p>1. 머티리얼 가이드 기준 탭<br>
+2. Basil의 레시피 탭은 맞춤화된 타이포그래피와 컬러, 상태값을 사용합니다. 맞춤화된 선택값에서는 기존보다 굵어진 텍스트 밑에 선이 추가됩니다.</br></p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">스테퍼</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil은 레시피 순서에 선이 없는 스테퍼를 사용하기 때문에 사용자는 원하는 순서대로 다른 단계를 이동핧 수 있습니다. 스테퍼는 맞춤화된 상하 간격을 포함하여 Basil의 타이포그래피와 색상표를 사용합니다.</p><hr class="spacer" role="presentation"/></div></section><section class="module-figure col-2"><div class="module"><figure class="inline-media inline-media--image" data-maxwidth="720px">
+<div class="bordered frame media-placeholder lazy-wrapper" style="padding-top: 177.777777778%;">
+<div class="js-lightbox-el" data-template="inline"> <img alt="" aria-describedby="components-figure-caption-5" class="lightbox__image zoom-target js-zoom-target js-lightbox-image inline-image animatable lazy-wrapper__image js-lazy-image" data-aspect-ratio="177.777777778%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1LUJfB9Wd3yjJOBt2zsJ8Jpz7DHd8zbsE%2Fcasestudies-basil-steppers-1.png" src="">
+</img></div>
+</div>
+<figcaption id="components-figure-caption-5">
+<p>(1) Basil은 배율을 활용한 스테퍼를 사용하며, 최대 200%까지 확대됩니다.<br>
+(2) Basil의 스테퍼는 화면의 오른쪽에 나타납니다.</br></p></figcaption>
+</figure></div><div class="figure"><figure aria-hidden="true" class="inline-media inline-media--video" data-maxwidth="720px">
+<div class="video-player media-placeholder hide-controls bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": true, "hideControls": true}' style="padding-top: 177.777777778%;">
+<video class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1SsJFp5e-WbeGJr5cBV2_E73QOq-kNtxr%2Fsteppers-custom-basil-mobile.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div></figure><figcaption>
+<p>Basil이 스테퍼에 스트레치 모션을 사용하여 탄력적인 스타일을 보여줍니다.</p></figcaption></div></section></div></div></div></div></div>
+        </div>
+      </section>
+<hr />      <section id="motion" class="container container--large js-waypoints-trigger article__section" data-section-title="Motion" aria-label="Motion">
+          <h2 class="article__chapter-title">
+            모션
+            <span class="article-controls">
+              
+              
+            </span>
+          </h2>
+
+        <div class="article__copy">
+          <div>
+<div aria-hidden="true" class="keywords hidden">case study, basil, vignette</div>
+<div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">런치 스크린</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil의 로고 애니메이션은 앱을 통한 패럴럭스를 사용하였습니다. 하단에 위치한 화살표의 미세한 움직임은 사용자가 스크롤하도록 돕습니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<video aria-describedby="motion-figure-caption-0" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1X_luhQzbs0gqKzZ4MTHa4FUjxVhu30yk%2F01-launch.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-0">
+<p>Basil을 시작하면 로고 애니메이션이 시작됩니다.</p></figcaption>
+</figure></div></section></div><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../motion/customization.html#customization"}
+' href="../motion/customization.html#customization" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1pLMxWngUnpcj4Vp7im16NzSBp4dleXSn%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Customization</h2>
+<p class="object-card__body">Motion can be customized to express a distinct style and personality.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../navigation/navigation-transitions.html#navigation-transitions"}
+' href="../navigation/navigation-transitions.html#navigation-transitions" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1epxiySqILq4Fdqo67U6pS2S4GUY7UwY_%2Fnavigation-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1epxiySqILq4Fdqo67U6pS2S4GUY7UwY_%2Fnavigation-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Navigation transitions</h2>
+<p class="object-card__body">Navigational transitions are movements between states in an app, such as from a high-level view to a detailed view.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><aside class="object-card object-card--inline mdc-ripple-surface search-skip js-object-card" data-comp="Reference">
+<a class="object-card__link js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "object card",
+    "action": "link click",
+    "label": "../motion/understanding-motion.html#understanding-motion"}
+' href="../motion/understanding-motion.html#understanding-motion" rel="noopener" target="_blank">
+<div class="object-card__image" data-image-path="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F16enTVh-lUYPClKM_rpE6RQX4RDqgNl1I%2Fmotion-thumbnail-1x1-circle.png" style="background-image: url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F16enTVh-lUYPClKM_rpE6RQX4RDqgNl1I%2Fmotion-thumbnail-1x1-circle.png');"></div>
+<div class="object-card__copy">
+<h2 class="object-card__title">Understanding motion</h2>
+<p class="object-card__body">Motion helps make a UI expressive and easy to use.</p>
+</div>
+<p class="object-card__label">
+      Related Article
+      <i class="object-card__icon object-card__icon--open material-icons">arrow_downward</i>
+</p>
+</a>
+</aside><p></p></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">내비게이션 트랜지션</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>Basil은 앱을 탐색할 때 이징, 패럴럭스, 간결한 트랜지션을 사용합니다.</p><h2>Mobile</h2><p>패럴럭스는 요소 간의 계층을 표시하고 트랜지션 중에 시각적인 흥미를 유도하는데 사용됩니다.
+</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 100.0%;">
+<video aria-describedby="motion-figure-caption-1" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1RPL04rH9dRRZ8Y8eH5b0dW-bGdTkQggW%2F02-parallax.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-1">
+<p>모바일의 네비게이션 트랜지션은 패럴럭스를 사용합니다.</p></figcaption>
+</figure></div></section></div><div class="col-list rich-media"><section class="module col-1 h2-spacing"><div class="module"><h2>태블릿과 데스크톱</h2><p>태블릿과 데스크톱에서, Basil은 단순하고 깔끔한 전환을 위해 간결한 트랜지션을 사용합니다. Z축의 변환은 페이드 애니메이션과 결합하여 간결한 트랜지션을 만듭니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 75.0%;">
+<video aria-describedby="motion-figure-caption-2" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1SqbzZK_luz3iGSbGWRzNeZKNV61EDdp2%2F04-condensedtransition.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-2">
+<p>태블릿과 데스크톱의 부모-자식 전환은 레시피를 클릭할 때 압축됩니다.</p></figcaption>
+</figure></div></section></div></div></div></div><div class="collapsible" data-comp="Collapsible" data-props-collapsible='{"collapsed": false}'><div class="collapsible__brief js-collapsible-brief"><h1 class="collapsible__heading">스트레치</h1></div><div class="collapsible__wrap js-collapsible-wrap"><div class="collapsible__content js-collapsible-content"><div class="col-list rich-media"><section class="module col-1"><div class="module"><p>스테퍼와 같은 컴포넌트는 스트레치 모션을 사용하여 단순하면서도 흥미로운 인터랙션을 표현합니다.</p><figure class="inline-media inline-media--video" data-maxwidth="1520px">
+<div class="video-player media-placeholder bordered frame" data-comp="VideoPlayer" data-props-videoplayer='{"autoPlay": false, "hideControls": false}' style="padding-top: 50.0%;">
+<video aria-describedby="motion-figure-caption-3" class="video-player__video animatable js-video-player js-video-load" controls="" loop="" muted="" preload="metadata">
+<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1LdeLDE-uMvf0j3LE6N9MaZUG5iDx5oVZ%2F03-elasticity.mp4" src="" type="video/mp4"> </source></video>
+<div class="video-player__controls">
+<button aria-label="Play" class="video-player__button video-player__play js-video-controls-play">
+</button>
+<button aria-label="Pause" class="video-player__button video-player__pause js-video-controls-pause">
+</button>
+<button aria-label="Mute" class="video-player__button video-player__mute js-video-controls-mute" data-comp="Tooltip" data-props-tooltip='{"tip": "Mute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_up</i>
+</button>
+<button aria-label="Unmute" class="video-player__button video-player__unmute js-video-controls-unmute" data-comp="Tooltip" data-props-tooltip='{"tip": "Unmute", "direction": "bottom"}'>
+<i class="material-icons video-player__icon">volume_off</i>
+</button>
+</div>
+</div>
+<figcaption id="motion-figure-caption-3">
+<p>스테퍼는 단계 사이를 전환할 때 탄성을 표현합니다.</p></figcaption>
+</figure></div></section></div></div></div></div></div>
+        </div>
+      </section>
+
+  </div>
+
+  <div class="container container--large">
+
+  <h2>Up next
+      <div class="article-controls">
+        
+      </div>
+  </h2>
+
+<div class="suggested-articles"><div>
+<a aria-label="Crane" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/crane.html"}
+' href="../material-studies/crane.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Eh7V4Qaqj3yvat9YSV3gN6CWYGNgaOup%2Fcrane-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">Crane</h4>
+</a>
+<a aria-label="Fortnightly" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/fortnightly.html"}
+' href="../material-studies/fortnightly.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xpsWT0DfgEuJ8cP1ZV-dGRbe2G7FHncu%2Ffortnightly-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">Fortnightly</h4>
+</a><br>
+
+<a aria-label="Owl" class="suggested-articles__item animatable js-anim-scroll js-analytics-click" data-analytics='  {
+    "event": "trackEvent",
+    "category": "suggested articles",
+    "action": "link click",
+    "label": "../material-studies/owl.html"}
+' href="../material-studies/owl.html">
+<div class="suggested-articles__item-img mdc-ripple-surface" data-mdc-ripple-image="" style="background-image:url('https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1-YKh_M7CACGYuWaQiYlXcRoSF4bhU9N-%2Fowl-thumbnail-2x1.png');">
+</div>
+<h3 class="suggested-articles__item-title eyebrow">Material studies</h3>
+<h4 class="suggested-articles__item-subtitle">Owl</h4>
+</a></div></div>  </div>
+</article>
+    </main>
+
+
+
+    <div class="ui-mask js-ui-mask"></div>
+<div
+    class="lightbox js-lightbox"
+    data-comp="Lightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-labelledby="sr-lightbox-title">
+  <h2 class="screenreader-only sr-lightbox-title" tabindex="0">
+    Explore how Shrine, a retail app, uses Material Design.
+  </h2>
+
+    <header class="lightbox__header">
+      <div class="lightbox__header-title">
+        <span
+            class="lightbox__button js-lightbox-close"
+            data-comp="Tooltip"
+            data-props-tooltip='{"tip": "Close", "direction": "bottom"}'>
+          <i
+              class="material-icons material-icons--padded mdc-ripple-surface"
+              data-mdc-ripple-is-unbounded tabindex="0">
+            close
+          </i>
+        </span>
+        <h2 class="lightbox__title js-lightbox-title"></h2>
+      </div>
+
+      <div class="lightbox__actions">
+        <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle" data-comp="Tooltip" data-props-tooltip='{"tip": "View Specs", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>flip</i>
+        </button>
+
+        <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip" data-props-tooltip='{"tip": "Share", "direction": "bottom"}'>
+          <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>share</i>
+        </button>
+
+      </div>
+    </header>
+
+    <div class="lightbox__template js-zoom-wrapper">
+      <div class="lightbox__content js-lightbox-content">
+<img class="ui-loader" src="../static/m2/images/loader.svg" alt="loader" aria-hidden="true" />      </div>
+<div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar">
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Image only", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item" value="image" >
+        <i class="material-icons">&#xE3F4;</i>
+        <span class="redline-sidebar__label-text">Image only</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Measurements", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item" value="measurements" >
+        <i class="material-icons">format_shapes</i>
+        <span class="redline-sidebar__label-text">Measurements</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Text", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item" value="text" >
+        <i class="material-icons">format_size</i>
+        <span class="redline-sidebar__label-text">Text</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Color", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item" value="colors" >
+        <i class="material-icons">palette</i>
+        <span class="redline-sidebar__label-text">Color</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Shape and Elevation", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item" value="shapes" >
+        <i class="material-icons">rounded_corner</i>
+        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Components", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item" value="components" >
+        <i class="material-icons">category</i>
+        <span class="redline-sidebar__label-text">Components</span>
+      </button>
+    </div>
+<div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip='{"tip": "Notes", "direction": "left"}'>
+      <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item" value="notes" >
+        <i class="material-icons">notes</i>
+        <span class="redline-sidebar__label-text">Notes</span>
+      </button>
+    </div>
+<div class="redline-sidebar__toggles js-redline-layer-toggles">
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="dimensions">Dimensions</label>
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="padding">Padding</label>
+<div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+      <label for="typography">Text baseline</label>
+  </div>
+</div><nav class="carousel__nav">
+  <button
+      class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Previous", "direction": "right"}'>
+    <i class="material-icons">chevron_left</i>
+  </button>
+
+  <button
+      class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next"
+      data-comp="Tooltip"
+      data-props-tooltip='{"tip": "Next", "direction": "left"}'>
+    <i class="material-icons">chevron_right</i>
+  </button>
+</nav><div class="zoom-buttons" data-comp="Zoom">
+  <div class="zoom-buttons__wrapper">
+
+    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom out", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">remove</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip='{"tip": "Reset", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">search</i>
+    </button>
+    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip='{"tip": "Zoom in", "direction": "top"}'>
+      <i class="material-icons mdc-ripple-surface">add</i>
+    </button>
+
+    <div class="zoom-buttons__extras">
+      <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker" data-props-tooltip='{"tip": "Color picker", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">colorize</i>
+      </button>
+      <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip='{"tip": "Ruler", "direction": "top"}'>
+        <i class="material-icons mdc-ripple-surface">straighten</i>
+      </button>
+    </div>
+
+  </div>
+</div>    </div>
+
+
+<aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description" data-comp="Share">
+  <div class="mdc-dialog__surface">
+    <header class="mdc-dialog__header">
+      <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+      <button type="button" class="mdc-dialog-share-close js-dialog-close">
+        <i class="material-icons material-icons--padded mdc-ripple-surface" data-mdc-ripple-is-unbounded>close</i>
+      </button>
+    </header>
+    <section id="mdc-dialog-description" class="mdc-dialog__body">
+      <input type="text" readonly class="mdc-dialog-share-url js-share-url" />
+      <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy">Copy</button>
+    </section>
+  </div>
+  <div class="mdc-dialog__backdrop"></div>
+</aside></div><div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+  <div class="mdc-snackbar__text"></div>
+  <div class="mdc-snackbar__action-wrapper">
+    <button type="button" class="mdc-button mdc-snackbar__action-button"></button>
+  </div>
+</div>
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="../static/m2/js/main.min.js"></script><script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </body>
+</html>
