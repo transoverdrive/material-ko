@@ -69,9 +69,10 @@ $(document).ready(function(){
   }
 
   function gotoInstallPage() {
-    location.href = isAndroid ? androidStoreURL : iosStoreURL;
+    if ( isAndroid ) {
+        location.href = androidStoreURL    
+    } 
   }
-
   //파파 설치하기
   $("#installBtn").bind("click", function(){
     gotoInstallPage();
