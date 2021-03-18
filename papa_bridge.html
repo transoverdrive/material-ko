@@ -47,56 +47,37 @@ html,body {height:100%}
 .papa .btn a {display:block;width:100%;height:36px;line-height:36px;letter-spacing:-0.025em;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center}
 .papa .btn-papa {background:#007cff;color:#fff}
 </style>
-  
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+  var uagentLow = navigator.userAgent.toLocaleLowerCase();
+  var isAndroid = uagentLow.search("android") > -1;
+  var isIos = uagentLow.search("iphone") > -1;
+  var iosStoreURL = 'https://itunes.apple.com/kr/app/id1458311394';
+  var androidStoreURL = 'market://details?id=io.cubecar.rs.rider';
+  var iosSchemeURL = 'papa://';
+  var androidSchemeURL='https://cubecar.page.link/JUj2';
 
-  var android_url = 'https://cubecar.page.link/JUj2';
-  var ios_appstore_url = 'https://itunes.apple.com/kr/app/id1458311394';
-  var ios_url = 'papa://';
-  
-  function mo_chk(){
-    var os;
-    var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));	 
-    if (mobile) {
-      var userAgent = navigator.userAgent.toLowerCase();
-      if (userAgent.search("android") > -1){
-        return os = "android";
-      }else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)){
-        return os = "ios";
-      }else{
-        return os = "other";
-      }
-    } else {
-      return os = "pc";
+  function gotoApp() {
+    if ( !isIos && !isAndroid ) {
+      return;
     }
+    try {
+      var fullUrl = ( isAndroid ) ? androidSchemeURL : iosSchemeURL ;
+      location.href = fullUrl;
+    } catch(e) {}
   }
 
-  function action_app_papa(android_url , ios_url , ios_appstore_url){
-    var result_mo_chk = mo_chk();
-    if(result_mo_chk!="pc"){
-      if(result_mo_chk == "ios"){
-        setTimeout( function() {
-          window.open(ios_appstore_url);
-        }, 1500);
-        location.href = ios_url;
-      }else{
-        location.href = android_url;
-      }
-    }
+  function gotoInstallPage() {
+    location.href = isAndroid ? androidStoreURL : iosStoreURL;
   }
-$("#installBtn").bind("click", function(){
-    var result_mo_chk = mo_chk();
-    if(result_mo_chk!="pc"){
-      if(result_mo_chk == "ios"){
-        location.href = ios_appstore_url;
-      }else{
-        location.href = android_store_url;
-      }
-    }
-    location.href = buttonUrl;
+
+  //파파 설치하기
+  $("#installBtn").bind("click", function(){
+    gotoInstallPage();
   });
+  gotoApp();
 });
 </script>
 
