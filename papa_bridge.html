@@ -50,36 +50,43 @@ html,body {height:100%}
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-  var uagentLow = navigator.userAgent.toLocaleLowerCase();
-  var isAndroid = uagentLow.search("android") > -1;
-  var isIos = uagentLow.search("iphone") > -1;
-  var iosStoreURL = 'https://itunes.apple.com/kr/app/id1458311394';
-  var androidStoreURL = 'market://details?id=io.cubecar.rs.rider';
-  var iosSchemeURL = 'papa://';
-  var androidSchemeURL='https://cubecar.page.link/JUj2';
-
-  function gotoApp() {
-    if ( !isIos && !isAndroid ) {
-      return;
+ 
+  function mo_chk(){
+    var os;
+    var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));	 
+    if (mobile) {
+      var userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.search("android") > -1){
+        return os = "android";
+      }else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)){
+        return os = "ios";
+      }else{
+        return os = "other";
+      }
+    } else {
+      return os = "pc";
     }
-    try {
-      var fullUrl = ( isAndroid ) ? androidSchemeURL : iosSchemeURL ;
-      location.href = fullUrl;
-    } catch(e) {}
   }
 
-  function gotoInstallPage() {
-    location.href = isAndroid ? androidStoreURL : iosStoreURL;
+  function action_app_papa {
+    var result_mo_chk = mo_chk();
+    if(result_mo_chk!="pc"){
+      if(result_mo_chk == "ios"){
+        setTimeout( function() {
+          window.open('https://itunes.apple.com/kr/app/id1458311394');
+        }, 1500);
+        location.href = 'papa://';
+      }else{
+        location.href = 'https://cubecar.page.link/JUj2';
+      }
+    }
   }
-
-  //파파 설치하기
-  $("#installBtn").bind("click", function(){
-    gotoInstallPage();
-  });
-  gotoApp();
-});
 </script>
+
+
+<span onclick="action_app_papa">
+    Instagram App 실행 
+</span>
 
 <!-- 
 <script type="text/javascript">
@@ -101,7 +108,7 @@ $(document).ready(function(){
     <br/>
     <p class="subtxt">파파가 설치되어있지 않다면?</p>
     <div class="btn">
-      <a class="btn-papa" id="installBtn" href="#">파파 설치하기</a>
+      <a class="btn-papa" id="installBtn" onclick="action_app_papa">파파 설치하기</a>
     </div>
   </div>
 </body>
