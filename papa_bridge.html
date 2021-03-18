@@ -86,9 +86,19 @@ $(document).ready(function(){
       }
     }
   }
-}
+$("#installBtn").bind("click", function(){
+    var result_mo_chk = mo_chk();
+    if(result_mo_chk!="pc"){
+      if(result_mo_chk == "ios"){
+        location.href = ios_appstore_url;
+      }else{
+        location.href = android_store_url;
+      }
+    }
+    location.href = buttonUrl;
+  });
+});
 </script>
-
 
 <!-- 
 <script type="text/javascript">
