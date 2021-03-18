@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="Ko">
 <head>
@@ -52,8 +53,9 @@ html,body {height:100%}
 $(document).ready(function(){
   var uagentLow = navigator.userAgent.toLocaleLowerCase();
   var isAndroid = uagentLow.search("android") > -1;
+    // 안드로이드인 경우 0이 아님 -> true
   var isIos = uagentLow.search("iphone") > -1;
-  var iosStoreURL = 'https://itunes.apple.com/kr/app/id1458311394';
+  var iosStoreURL = 'https://apps.apple.com/kr/app/id1458311394';
   var androidStoreURL = 'market://details?id=io.cubecar.rs.rider';
   var iosSchemeURL = 'papa://';
   var androidSchemeURL='https://cubecar.page.link/JUj2';
@@ -69,10 +71,19 @@ $(document).ready(function(){
   }
 
   function gotoInstallPage() {
-    if ( isAndroid ) {
-        location.href = androidStoreURL    
-    } 
+    if ( !isIos ) {
+      location.href = androidStoreURL;  
+    } else {
+      location.href = 'https://www.papa.city';
+    };
   }
+
+  /*
+  function gotoInstallPage() {
+    location.href = isAndroid ? androidStoreURL : iosStoreURL;
+  }
+  */
+
   //파파 설치하기
   $("#installBtn").bind("click", function(){
     gotoInstallPage();
