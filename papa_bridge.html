@@ -71,10 +71,10 @@ $(document).ready(function(){
   }
 
   function gotoInstallPage() {
-    if ( !isIos ) {
+    if ( isAndroid ) {
       location.href = androidStoreURL;  
     } else {
-      location.href = 'https://www.papa.city';
+      return;
     };
   }
 
@@ -86,7 +86,8 @@ $(document).ready(function(){
 
   //파파 설치하기
   $("#installBtn").bind("click", function(){
-    gotoInstallPage();
+    var buttonUrl = ( isAndroid ) ? androidStoreURL : iosStoreURL ;
+    location.href = buttonUrl;
   });
   gotoApp();
 });
